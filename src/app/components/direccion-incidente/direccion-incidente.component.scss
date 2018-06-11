@@ -1,6 +1,9 @@
 ::ng-deep .mat-card:not([class*=mat-elevation-z]) {
   border: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0;
+  box-shadow: none;
+}
+::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
 }
 
 .direccion_incidente {

@@ -1,8 +1,17 @@
 .no_medica {
-  mat-grid-tile {
-      background: lightblue;
-  }
+    mat-grid-tile {
+        background: lightblue;
+    }
 }
-body{
-height: 100vh;
+
+::ng-deep .mat-expansion-panel-spacing {
+    margin: 0 !important;
+}
+
+::ng-deep .mat-expansion-panel-body {
+  padding: 0px 10px !important;
+}
+
+body {
+    height: 100vh;
 }
