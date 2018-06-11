@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import "../_mixins";
+
+.toolbar {
+    .origen {
+        text-align: left;
+        display: inline-block;
+
+        mat-icon {
+            vertical-align: middle;
+        }
+
+        span {
+            margin-left: 15px;
+            vertical-align: middle;
+        }
+    }
+
+    .llamada {
+        text-align: center;
+        height: 100%;
+
+        .texto_llamada {
+            display: inline-block;
+            padding: 16px;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+
+            @include tablet {
+                font-size: 15px;
+            }
+        }
+
+        .texto_llamada_color_verde {
+            background: #43A047;
+        }
+    }
+
+    .iconos {
+        text-align: right;
+        display: inline-block;
+
+        .generar_reporte {
+            font-size: 13px;
+            font-weight: bold;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        mat-icon {
+            vertical-align: middle;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+    }
+}

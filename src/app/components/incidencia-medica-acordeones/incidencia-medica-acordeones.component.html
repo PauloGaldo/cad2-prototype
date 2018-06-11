@@ -1,0 +1,73 @@
+<div fxLayout="column" fxFlex="70" fxLayoutWrap="wrap">
+  <div fxFlex fxLayout="row">
+
+    <div fxLayout="column" fxFlex="50">
+
+      <mat-accordion [multi]="true">
+        <mat-expansion-panel fxLayout="column">
+
+          <mat-expansion-panel-header fxFlex="100">
+            <mat-panel-title>
+              Origen de la llamada
+            </mat-panel-title>
+            <mat-panel-description>
+              Colonia - Calle 123 - N°1123
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel fxLayout="column">
+
+          <mat-expansion-panel-header fxFlex="100">
+            <mat-panel-title>
+              Dirección del incidente
+            </mat-panel-title>
+            <mat-panel-description>
+              Colonia - Calle 123 - N°1123
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <cad-direccion-incidente style="width: 100%"></cad-direccion-incidente>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel fxLayout="column">
+
+          <mat-expansion-panel-header fxFlex="100">
+            <mat-panel-title>
+              Descripcion del incidente
+            </mat-panel-title>
+            <mat-panel-description>
+              LLAMADA TELEFONO FIJO
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <cad-descripcion-incidente style="width: 100%"></cad-descripcion-incidente>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+
+    </div>
+
+    <div fxLayout="column" fxFlex="50">
+      <div fxLayout="row" style="height: 50%;">
+        <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
+      </div>
+      <div fxLayout="row" style="height: 50%;">
+        <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
+      </div>
+    </div>
+
+  </div>
+
+  <div fxFlex fxLayout="row" style="height: 100%;">
+    <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
+  </div>
+
+</div>
+<div fxLayout="column" fxFlex="30">
+
+</div>
