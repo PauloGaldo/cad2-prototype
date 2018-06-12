@@ -16,21 +16,21 @@ export class NotasIncidenteComponent implements OnInit {
       name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
       updated: new Date('1/18/16'),
     }
-    // ,
-    // {
-    //   name: 'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
-    //   updated: new Date('1/18/16'),
-    // }
-    // ,
-    // {
-    //   name: 'laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
-    //   updated: new Date('1/18/16'),
-    // }
-    // ,
-    // {
-    //   name: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-    //   updated: new Date('1/18/16'),
-    // }
+    ,
+    {
+      name: 'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
+      updated: new Date('1/18/16'),
+    }
+    ,
+    {
+      name: 'laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
+      updated: new Date('1/18/16'),
+    }
+    ,
+    {
+      name: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+      updated: new Date('1/18/16'),
+    }
   ];
 
   constructor() { }

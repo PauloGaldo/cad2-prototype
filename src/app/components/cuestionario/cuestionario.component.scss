@@ -1,3 +1,4 @@
+@import "../../../_mixins";
 ::ng-deep .mat-vertical-stepper-header {
     padding: 20px !important;
     max-height: 18px !important;
@@ -10,4 +11,7 @@
 .cuestionario {
     max-height: 45vh;
     overflow: auto;
+    @include tablet {
+      max-height: 30vh;
+    }
 }

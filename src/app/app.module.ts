@@ -16,6 +16,7 @@ import { CoorporacionesComponent } from './components/coorporaciones/coorporacio
 import { InvolucradosComponent } from './components/involucrados/involucrados.component';
 import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabla-involucrados.component';
 import { CuestionarioComponent } from './components/cuestionario/cuestionario.component';
+import { ProtocoloComponent } from './components/protocolo/protocolo.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { CuestionarioComponent } from './components/cuestionario/cuestionario.co
     CoorporacionesComponent,
     InvolucradosComponent,
     TablaInvolucradosComponent,
-    CuestionarioComponent
+    CuestionarioComponent,
+    ProtocoloComponent
   ],
   imports: [
     BrowserModule,

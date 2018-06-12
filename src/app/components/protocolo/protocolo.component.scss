@@ -1,0 +1,8 @@
+@import "../../../_mixins";
+.protocolo {
+  max-height: 45vh;
+  overflow: auto;
+  @include tablet {
+    max-height: 30vh;
+  }
+}
