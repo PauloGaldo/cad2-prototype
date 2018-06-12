@@ -25,27 +25,32 @@ export class TablaInvolucradosComponent implements AfterViewInit {
     this.dataSource.paginator = this.paginator;
 
     const alturaVentana = window.innerHeight;
+    const anchuraVentana = window.innerWidth;
     const columna1 = document.getElementsByClassName('columna1');
     const columna2 = document.getElementsByClassName('columna2');
     const table_container = document.getElementsByClassName('table_container');
 
-    setTimeout(() => {
-      table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
-    }, 100);
+    if (anchuraVentana > alturaVentana) {
+      setTimeout(() => {
+        table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
+      }, 100);
 
-    if (columna1.length) {
-      columna1[0].addEventListener('click', function () {
-        setTimeout(() => {
-          table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
-        }, 200);
-      });
-    }
-    if (columna2.length) {
-      columna2[0].addEventListener('click', function () {
-        setTimeout(() => {
-          table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
-        }, 200);
-      });
+      if (columna1.length) {
+        columna1[0].addEventListener('click', function () {
+          setTimeout(() => {
+            table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
+          }, 200);
+        });
+      }
+      if (columna2.length) {
+        columna2[0].addEventListener('click', function () {
+          setTimeout(() => {
+            table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
+          }, 200);
+        });
+      }
+    } else {
+      table_container[0].style.height = '250px';
     }
   }
 

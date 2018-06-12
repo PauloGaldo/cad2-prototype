@@ -15,6 +15,7 @@ import { NotasIncidenteComponent } from './components/notas-incidente/notas-inci
 import { CoorporacionesComponent } from './components/coorporaciones/coorporaciones.component';
 import { InvolucradosComponent } from './components/involucrados/involucrados.component';
 import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabla-involucrados.component';
+import { CuestionarioComponent } from './components/cuestionario/cuestionario.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabl
     NotasIncidenteComponent,
     CoorporacionesComponent,
     InvolucradosComponent,
-    TablaInvolucradosComponent
+    TablaInvolucradosComponent,
+    CuestionarioComponent
   ],
   imports: [
     BrowserModule,
