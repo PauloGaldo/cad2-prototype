@@ -9,9 +9,22 @@
 }
 
 ::ng-deep .mat-expansion-panel-body {
-  padding: 0px 10px !important;
+    padding: 0px 10px !important;
 }
 
 body {
     height: 100vh;
+}
+
+@function calculate-height($column, $body) {
+  @return $column - $body;
+}
+
+.incidencia_medica_acordeon {
+    .columna1 {
+        max-height: 65vh;
+    }
+    .columna2 {
+        max-height: 65vh;
+    }
 }

@@ -1,0 +1,25 @@
+::ng-deep .mat-card:not([class*=mat-elevation-z]) {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+}
+
+::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+.descripcion_incidente {
+    height: 100%;
+
+    .form {
+        display: flex;
+        max-height: 100%;
+
+        .input {
+            margin: 0px 5px;
+        }
+
+        .list_container {
+            overflow: auto;
+        }
+    }
+}

@@ -10,6 +10,11 @@ import { IncidenciaMedicaComponent } from './components/incidencia-medica/incide
 import { OrigenLlamadaComponent } from './components/origen-llamada/origen-llamada.component';
 import { MaterialModule } from './shared/material.module';
 import { IncidenciaMedicaAcordeonesComponent } from './components/incidencia-medica-acordeones/incidencia-medica-acordeones.component';
+import { TipoIncidenteComponent } from './components/tipo-incidente/tipo-incidente.component';
+import { NotasIncidenteComponent } from './components/notas-incidente/notas-incidente.component';
+import { CoorporacionesComponent } from './components/coorporaciones/coorporaciones.component';
+import { InvolucradosComponent } from './components/involucrados/involucrados.component';
+import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabla-involucrados.component';
 
 
 @NgModule({
@@ -19,7 +24,12 @@ import { IncidenciaMedicaAcordeonesComponent } from './components/incidencia-med
     OrigenLlamadaComponent,
     DireccionIncidenteComponent,
     DescripcionIncidenteComponent,
-    IncidenciaMedicaAcordeonesComponent
+    IncidenciaMedicaAcordeonesComponent,
+    TipoIncidenteComponent,
+    NotasIncidenteComponent,
+    CoorporacionesComponent,
+    InvolucradosComponent,
+    TablaInvolucradosComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,11 @@
-<div fxLayout="column" fxFlex="70" fxFlex.lt-lg="100" fxLayoutWrap="wrap">
+<div fxLayout="column" fxFlex="70" fxFlex.lt-lg="100" fxLayoutWrap="wrap" class="incidencia_medica_acordeon">
   <div fxFlex fxLayout="row">
 
-    <div fxLayout="column" fxFlex="50">
+    <div fxLayout="column" fxFlex="50" style="border: 1px solid lightgray;" class="columna1">
 
       <mat-accordion [multi]="true">
-        <mat-expansion-panel fxLayout="column">
+
+        <mat-expansion-panel fxLayout="column" expanded="true">
 
           <mat-expansion-panel-header fxFlex="100">
             <mat-panel-title>
@@ -19,7 +20,7 @@
 
         </mat-expansion-panel>
 
-        <mat-expansion-panel fxLayout="column">
+        <mat-expansion-panel fxLayout="column" expanded="true">
 
           <mat-expansion-panel-header fxFlex="100">
             <mat-panel-title>
@@ -34,7 +35,7 @@
 
         </mat-expansion-panel>
 
-        <mat-expansion-panel fxLayout="column">
+        <mat-expansion-panel fxLayout="column" expanded="true">
 
           <mat-expansion-panel-header fxFlex="100">
             <mat-panel-title>
@@ -48,26 +49,56 @@
           <cad-descripcion-incidente style="width: 100%"></cad-descripcion-incidente>
 
         </mat-expansion-panel>
+
       </mat-accordion>
 
     </div>
 
-    <div fxLayout="column" fxFlex="50">
-      <div fxLayout="row" style="height: 50%;">
-        <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
-      </div>
-      <div fxLayout="row" style="height: 50%;">
-        <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
+    <div fxLayout="column" fxFlex="50" style="border: 1px solid lightgray;" class="columna2">
+      <mat-accordion [multi]="true">
+
+        <mat-expansion-panel fxLayout="column" expanded="true">
+          <mat-expansion-panel-header fxFlex="100">
+            <mat-panel-title>
+              Tipo de incidente
+            </mat-panel-title>
+            <mat-panel-description>
+              DISTURBIOS
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <cad-tipo-incidente style="width: 100%"></cad-tipo-incidente>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel fxLayout="column" expanded="true">
+          <mat-expansion-panel-header fxFlex="100">
+            <mat-panel-title>
+              Coporaciones
+            </mat-panel-title>
+            <mat-panel-description>
+              Coporaciones
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+
+          <cad-coorporaciones style="width: 100%"></cad-coorporaciones>
+
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+      <div fxLayout="row">
+        <cad-notas-incidente style="width: 100%"></cad-notas-incidente>
       </div>
     </div>
 
   </div>
 
-  <div fxFlex fxLayout="row" style="height: 100%;">
-    <cad-origen-llamada style="width: 100%"></cad-origen-llamada>
+  <div fxFlex fxLayout="row" class="involucrados">
+    <cad-involucrados style="width: 100%"></cad-involucrados>
   </div>
 
 </div>
-<div fxLayout="column" fxFlex="30">
+<div fxLayout="column" fxFlex="30" style="border: 1px solid lightgray;">
 
 </div>
