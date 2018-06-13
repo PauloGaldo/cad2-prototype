@@ -7,7 +7,11 @@
       <span>911 - León</span>
     </div>
     <div fxFlex class="llamada">
-      <div mat-ripple [matRippleUnbounded]="false" class="texto_llamada texto_llamada_color_verde">45685256 - JUAN PEREZ - Llamada telefonica (388) 42587546</div>
+      <div mat-ripple [matRippleUnbounded]="false" class="texto_llamada"
+      [ngClass]="{'texto_llamada_color_verde': nivelIncidenciaElegida === 'left',
+      'texto_llamada_color_amarillo': nivelIncidenciaElegida === 'center',
+       'texto_llamada_color_rojo': nivelIncidenciaElegida === 'right'}"
+        (click)="mostrarSabana()">45685256 - JUAN PEREZ - Llamada telefonica (388) 42587546</div>
     </div>
     <div fxFlex.gt-md="20" fxFlex.sm="20" class="iconos">
       <button mat-button class="generar_reporte">GENERAR REPORTE</button>
@@ -23,4 +27,40 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="sabana" [ngClass]="{'mostrar_sabana': verSabana}">
+    <mat-card-header>
+      <mat-card-title>
+        <span class="datos_incidencia">Datos incidencia</span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="row" class="nivel_incidencia">
+        <mat-button-toggle-group #group="matButtonToggleGroup" (change)="cambioIncidencia($event)">
+          <mat-button-toggle value="left">
+            <mat-icon>notification_important</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="center">
+            <mat-icon>error</mat-icon>
+          </mat-button-toggle>
+          <mat-button-toggle value="right">
+            <mat-icon>report_problem</mat-icon>
+          </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+      <div fxLayout="row" style="margin-top: 15px;">
+        <mat-form-field fxFlex="100">
+          <input matInput [matDatepicker]="picker" placeholder="Elije una fecha">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Enviar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
 <router-outlet></router-outlet>

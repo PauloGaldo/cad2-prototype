@@ -7,35 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotasIncidenteComponent implements OnInit {
 
+  public nota_incidente;
+
   notes = [
     {
       name: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur',
       updated: new Date('2/20/16'),
     },
-    {
-      name: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
-      updated: new Date('1/18/16'),
-    }
-    ,
-    {
-      name: 'et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
-      updated: new Date('1/18/16'),
-    }
-    ,
-    {
-      name: 'laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate',
-      updated: new Date('1/18/16'),
-    }
-    ,
-    {
-      name: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-      updated: new Date('1/18/16'),
-    }
   ];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onEnter(event: any) {
+    this.notes.push({ name: this.nota_incidente, updated: new Date() });
+    this.nota_incidente = null;
+    const alturaVentana = window.innerHeight;
+    const anchuraVentana = window.innerWidth;
+    const columna1 = document.getElementsByClassName('columna1');
+    const columna2 = document.getElementsByClassName('columna2');
+    const table_container = document.getElementsByClassName('table_container');
+    setTimeout(() => {
+      table_container[0].setAttribute('style', 'height:' + (alturaVentana - columna2[0].clientHeight - 117) + 'px');
+    }, 200);
   }
 
 }

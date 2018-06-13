@@ -5,7 +5,7 @@
     <div fxLayout="row">
       <mat-form-field fxFlex="100" class="input">
         <mat-label>Notas del incidente</mat-label>
-        <input matInput type="text">
+        <input matInput type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
       </mat-form-field>
     </div>
     <div fxLayout="row" class="list_container">

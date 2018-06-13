@@ -17,13 +17,14 @@ body {
 }
 
 @function calculate-height($column, $body) {
-  @return $column - $body;
+    @return $column - $body;
 }
 
 .incidencia_medica_acordeon {
     .columna1 {
         max-height: 65vh;
     }
+
     .columna2 {
         max-height: 65vh;
     }

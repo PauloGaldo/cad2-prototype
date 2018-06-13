@@ -32,25 +32,25 @@ export class TablaInvolucradosComponent implements AfterViewInit {
 
     if (anchuraVentana > alturaVentana) {
       setTimeout(() => {
-        table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
+        table_container[0].setAttribute('style', 'height:' + (alturaVentana - columna2[0].clientHeight - 117) + 'px');
       }, 100);
 
       if (columna1.length) {
         columna1[0].addEventListener('click', function () {
           setTimeout(() => {
-            table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
+            table_container[0].setAttribute('style', 'height:' + (alturaVentana - columna2[0].clientHeight - 117) + 'px');
           }, 200);
         });
       }
       if (columna2.length) {
         columna2[0].addEventListener('click', function () {
           setTimeout(() => {
-            table_container[0].style.height = (alturaVentana - columna2[0].clientHeight - 117) + 'px';
+            table_container[0].setAttribute('style', 'height:' + (alturaVentana - columna2[0].clientHeight - 117) + 'px');
           }, 200);
         });
       }
     } else {
-      table_container[0].style.height = '250px';
+      table_container[0].setAttribute('style', 'height:250px');
     }
   }
 
