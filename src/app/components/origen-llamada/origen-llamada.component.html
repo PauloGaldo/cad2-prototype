@@ -1,45 +1,61 @@
-<div fxFlex="100" class="origen_llamada">
-  <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+<mat-accordion [multi]="true">
+  <mat-expansion-panel fxLayout="column" expanded="true" hideToggle="true">
 
-    <div fxLayout="row">
-      <mat-form-field fxFlex="40" class="input">
-        <mat-label>Colonia</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field fxFlex="40" class="input">
-        <mat-label>Calle</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field fxFlex="20" class="input">
-        <mat-label>N°</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
+    <mat-expansion-panel-header fxFlex="100">
+      <mat-panel-title>
+        Origen de la llamada
+      </mat-panel-title>
+      <mat-panel-description>
+        Colonia - Calle 123 - N°1123
+      </mat-panel-description>
+      <mat-icon class='handle'>open_with</mat-icon>
+    </mat-expansion-panel-header>
+
+    <div fxFlex="100" class="origen_llamada">
+      <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="40" class="input" appearance="outline">
+            <mat-label>Colonia</mat-label>
+            <input matInput type="text" placeholder="Ingrese colonia">
+          </mat-form-field>
+          <mat-form-field fxFlex="40" class="input" appearance="outline">
+            <mat-label>Calle</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field fxFlex="20" class="input" appearance="outline">
+            <mat-label>N°</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="40" class="input" appearance="outline">
+            <mat-label>Estadio</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field fxFlex="40" class="input" appearance="outline">
+            <mat-label>Ciudad</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field fxFlex="20" class="input" appearance="outline">
+            <mat-label>C.P.</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="50" class="input" appearance="outline">
+            <mat-label>Latitud</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+          <mat-form-field fxFlex="50" class="input" appearance="outline">
+            <mat-label>Longitud</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+      </div>
     </div>
 
-    <div fxLayout="row">
-      <mat-form-field fxFlex="40" class="input">
-        <mat-label>Estadio</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field fxFlex="40" class="input">
-        <mat-label>Ciudad</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field fxFlex="20" class="input">
-        <mat-label>C.P.</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-    </div>
-
-    <div fxLayout="row">
-      <mat-form-field fxFlex="50" class="input">
-        <mat-label>Latitud</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-      <mat-form-field fxFlex="50" class="input">
-        <mat-label>Longitud</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
-    </div>
-  </div>
-</div>
+  </mat-expansion-panel>
+</mat-accordion>

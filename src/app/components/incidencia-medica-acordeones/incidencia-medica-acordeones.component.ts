@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DragulaService } from 'ng2-dragula';
 
 @Component({
   selector: 'cad-incidencia-medica-acordeones',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncidenciaMedicaAcordeonesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dragulaService: DragulaService) {
+    dragulaService.setOptions('first-bag', {
+      moves: function (el, container, handle) {
+        return handle.className === 'handle mat-icon material-icons';
+      }
+    });
+  }
 
   ngOnInit() {
   }

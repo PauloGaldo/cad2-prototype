@@ -23,3 +23,9 @@
         }
     }
 }
+mwlResizable {
+  box-sizing: border-box; // required for the enableGhostResize option to work
+}
+.handle{
+  color: rgba(0,0,0,.54);
+}

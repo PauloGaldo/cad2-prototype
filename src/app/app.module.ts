@@ -3,6 +3,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResizableModule } from 'angular-resizable-element';
+import { DragulaModule } from 'ng2-dragula';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoorporacionesComponent } from './components/coorporaciones/coorporaciones.component';
@@ -43,7 +45,9 @@ import { MaterialModule } from './shared/material.module';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    DragulaModule,
+    ResizableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

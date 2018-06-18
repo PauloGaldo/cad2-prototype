@@ -1,22 +1,41 @@
-<div fxFlex="100" class="descripcion_incidente">
+<div mwlResizable [resizeEdges]="{bottom: true, right: true, top: true, left: true}" (resizeEnd)="onResizeEnd($event)">
+  <mat-accordion [multi]="true">
+    <mat-expansion-panel fxLayout="column" expanded="true" hideToggle="true">
 
-  <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+      <mat-expansion-panel-header fxFlex="100">
+        <mat-panel-title>
+          Notas del incidente
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+        <mat-icon class='handle'>open_with</mat-icon>
+      </mat-expansion-panel-header>
 
-    <div fxLayout="row">
-      <mat-form-field fxFlex="100" class="input">
-        <mat-label>Notas del incidente</mat-label>
-        <input matInput type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
-      </mat-form-field>
-    </div>
-    <div fxLayout="row" class="list_container">
-      <mat-list style="width: 100%;">
-        <mat-list-item *ngFor="let note of notes" mat-ripple [matRippleUnbounded]="false" style="position: relative;">
-          <mat-icon mat-list-icon>note</mat-icon>
-          <h4 mat-line>{{note.name}}</h4>
-          <p mat-line> {{note.updated | date}} </p>
-        </mat-list-item>
-      </mat-list>
-    </div>
+      <div fxLayout="row">
+        <div fxFlex="100" class="descripcion_incidente">
 
-  </div>
+          <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+
+            <div fxLayout="row">
+              <mat-form-field fxFlex="100" class="input">
+                <mat-label>Notas del incidente</mat-label>
+                <input matInput type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
+              </mat-form-field>
+            </div>
+            <div fxLayout="row" class="list_container">
+              <mat-list style="width: 100%;">
+                <mat-list-item *ngFor="let note of notes" mat-ripple [matRippleUnbounded]="false" style="position: relative;">
+                  <mat-icon mat-list-icon>note</mat-icon>
+                  <h4 mat-line>{{note.name}}</h4>
+                  <p mat-line> {{note.updated | date}} </p>
+                </mat-list-item>
+              </mat-list>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div mwlResizeHandle [resizeEdges]="{bottom: true, right: true}"></div>
 </div>

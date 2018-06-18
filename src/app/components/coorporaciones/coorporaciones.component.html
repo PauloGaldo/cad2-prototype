@@ -1,33 +1,48 @@
-<div fxFlex="100" class="descripcion_incidente">
+<mat-accordion [multi]="true">
+  <mat-expansion-panel fxLayout="column" expanded="true" hideToggle="true">
+    <mat-expansion-panel-header fxFlex="100">
+      <mat-panel-title>
+        Coporaciones
+      </mat-panel-title>
+      <mat-panel-description>
+        Coporaciones
+      </mat-panel-description>
+      <mat-icon class='handle'>open_with</mat-icon>
+    </mat-expansion-panel-header>
 
-  <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+    <div fxFlex="100" class="descripcion_incidente">
 
-    <div fxLayout="row" fxLayoutAlign="center center">
-      <button mat-icon-button>
-        <mat-icon>account_balance</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>build</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>face</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>gavel</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>motorcycle</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>report</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>whatshot</mat-icon>
-      </button>
-      <button mat-icon-button>
-        <mat-icon>fingerprint</mat-icon>
-      </button>
+      <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <button mat-icon-button>
+            <mat-icon>account_balance</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>build</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>face</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>gavel</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>motorcycle</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>report</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>whatshot</mat-icon>
+          </button>
+          <button mat-icon-button>
+            <mat-icon>fingerprint</mat-icon>
+          </button>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-</div>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResizeEvent } from 'angular-resizable-element';
 
 @Component({
   selector: 'cad-notas-incidente',
@@ -16,9 +17,11 @@ export class NotasIncidenteComponent implements OnInit {
     },
   ];
 
-  constructor() { }
-
   ngOnInit() {
+  }
+
+  onResizeEnd(event: ResizeEvent): void {
+    console.log('Element was resized', event);
   }
 
   onEnter(event: any) {

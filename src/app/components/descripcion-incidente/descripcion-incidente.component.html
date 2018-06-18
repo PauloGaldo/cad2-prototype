@@ -1,13 +1,29 @@
-<div fxFlex="100" class="descripcion_incidente">
+<mat-accordion [multi]="true">
+  <mat-expansion-panel fxLayout="column" expanded="true" hideToggle="true">
 
-  <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+    <mat-expansion-panel-header fxFlex="100">
+      <mat-panel-title>
+        Descripcion del incidente
+      </mat-panel-title>
+      <mat-panel-description>
+        LLAMADA TELEFONO FIJO
+      </mat-panel-description>
+      <mat-icon class='handle'>open_with</mat-icon>
+    </mat-expansion-panel-header>
 
-    <div fxLayout="row">
-      <mat-form-field fxFlex="100" class="input">
-        <mat-label>Descripcion del incidente</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
+    <div fxFlex="100" class="descripcion_incidente">
+
+      <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Descripcion del incidente</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-</div>
+  </mat-expansion-panel>
+</mat-accordion>

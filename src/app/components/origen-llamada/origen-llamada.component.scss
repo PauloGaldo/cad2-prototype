@@ -4,7 +4,7 @@
 }
 
 ::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
-  box-shadow: none;
+    box-shadow: none;
 }
 
 .origen_llamada {
@@ -12,8 +12,17 @@
 
     .form {
         display: flex;
-        .input{
-          margin: 0px 5px;
+
+        .input {
+            margin: 0px 5px;
         }
     }
+}
+
+.handle {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+::ng-deep .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+    transform: translateY(-1.59375em) scale(1) !important;
 }

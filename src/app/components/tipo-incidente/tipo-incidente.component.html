@@ -1,13 +1,28 @@
-<div fxFlex="100" class="descripcion_incidente">
+<mat-accordion [multi]="true">
+  <mat-expansion-panel fxLayout="column" expanded="true" hideToggle="true">
+    <mat-expansion-panel-header fxFlex="100">
+      <mat-panel-title>
+        Tipo de incidente
+      </mat-panel-title>
+      <mat-panel-description>
+        DISTURBIOS
+      </mat-panel-description>
+      <mat-icon class='handle'>open_with</mat-icon>
+    </mat-expansion-panel-header>
 
-  <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+    <div fxFlex="100" class="descripcion_incidente">
 
-    <div fxLayout="row">
-      <mat-form-field fxFlex="100" class="input">
-        <mat-label>Tipo de incidente</mat-label>
-        <input matInput type="text">
-      </mat-form-field>
+      <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+
+        <div fxLayout="row">
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Tipo de incidente</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </div>
+
+      </div>
     </div>
 
-  </div>
-</div>
+  </mat-expansion-panel>
+</mat-accordion>
