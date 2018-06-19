@@ -1,5 +1,6 @@
-<mat-accordion [multi]="true">
-  <mat-expansion-panel fxLayout="column" expanded="true" hideToggle="true">
+<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 50, right: 50}" [ngStyle]="style" class="mwlResizable accordeon">
+  <mat-expansion-panel class="container" expanded="true" hideToggle="true" [ngStyle]="style">
 
     <mat-expansion-panel-header fxFlex="100">
       <mat-panel-title>
@@ -11,51 +12,53 @@
       <mat-icon class='handle'>open_with</mat-icon>
     </mat-expansion-panel-header>
 
-    <div fxFlex="100" class="direccion_incidente">
-      <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+    <ng-template matExpansionPanelContent>
+      <div fxFlex="100" class="direccion_incidente">
+        <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
 
-        <div fxLayout="row">
-          <mat-form-field fxFlex="30" class="input">
-            <mat-label>Colonia</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-          <mat-form-field fxFlex="30" class="input">
-            <mat-label>Calle</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-          <mat-form-field fxFlex="15" class="input">
-            <mat-label>N°</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-          <mat-form-field fxFlex="15" class="input">
-            <mat-label>C.P.</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-        </div>
+          <div fxLayout="row">
+            <mat-form-field fxFlex="30" class="input">
+              <mat-label>Colonia</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field fxFlex="30" class="input">
+              <mat-label>Calle</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field fxFlex="15" class="input">
+              <mat-label>N°</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field fxFlex="15" class="input">
+              <mat-label>C.P.</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
 
-        <div fxLayout="row">
-          <mat-form-field fxFlex="50" class="input">
-            <mat-label>Municipio</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-          <mat-form-field fxFlex="50" class="input">
-            <mat-label>Referencia</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-        </div>
+          <div fxLayout="row">
+            <mat-form-field fxFlex="50" class="input">
+              <mat-label>Municipio</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field fxFlex="50" class="input">
+              <mat-label>Referencia</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
 
-        <div fxLayout="row">
-          <mat-form-field fxFlex="50" class="input">
-            <mat-label>Entre calle 1</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
-          <mat-form-field fxFlex="50" class="input">
-            <mat-label>Entre calle 2</mat-label>
-            <input matInput type="text">
-          </mat-form-field>
+          <div fxLayout="row">
+            <mat-form-field fxFlex="50" class="input">
+              <mat-label>Entre calle 1</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+            <mat-form-field fxFlex="50" class="input">
+              <mat-label>Entre calle 2</mat-label>
+              <input matInput type="text">
+            </mat-form-field>
+          </div>
         </div>
       </div>
-    </div>
-
+      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
+    </ng-template>
   </mat-expansion-panel>
 </mat-accordion>

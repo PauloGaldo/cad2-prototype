@@ -2,20 +2,24 @@
   <div fxLayout="column" fxFlex="70" fxFlex.lt-lg="100" class="incidencia_medica_acordeon">
     <div fxFlex fxLayout="row">
 
-      <div fxLayout="column" fxFlex="50" style="border: 1px solid lightgray;" class="columna1" [dragula]='"first-bag"'>
+      <div fxLayout="column" fxFlex="50" class="columna1" [dragula]='"first-bag"'>
 
-          <cad-origen-llamada></cad-origen-llamada>
-          <cad-direccion-incidente></cad-direccion-incidente>
-          <cad-descripcion-incidente></cad-descripcion-incidente>
+        <cad-origen-llamada></cad-origen-llamada>
+        <cad-direccion-incidente></cad-direccion-incidente>
+        <cad-descripcion-incidente></cad-descripcion-incidente>
 
       </div>
 
-      <div fxLayout="column" fxFlex="50" style="border: 1px solid lightgray;" class="columna2" [dragula]='"first-bag"'>
-
+      <div fxLayout="column" fxFlex="50" class="columna2">
+        <div fxFlex fxLayout="row" style="flex: none !important;" [dragula]='"first-bag"'>
           <cad-tipo-incidente></cad-tipo-incidente>
+        </div>
+        <div fxFlex fxLayout="row" [dragula]='"first-bag"'>
           <cad-coorporaciones></cad-coorporaciones>
+        </div>
+        <div fxFlex fxLayout="row" [dragula]='"first-bag"'>
           <cad-notas-incidente></cad-notas-incidente>
-
+        </div>
       </div>
 
     </div>
@@ -26,7 +30,7 @@
 
   </div>
 
-  <div fxLayout="column" fxLayout.lt-lg="row" fxFlex="30" fxFlex.lt-lg="100" style="border: 1px solid lightgray;">
+  <div fxLayout="column" fxLayout.lt-lg="row" fxFlex="30" fxFlex.lt-lg="100">
     <div fxLayout="row" fxLayout.lt-lg="column" fxFlex.lt-lg="50">
       <cad-cuestionario fxFlex="100"></cad-cuestionario>
     </div>

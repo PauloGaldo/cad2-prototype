@@ -124,3 +124,33 @@
     background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
     background-size: cover;
 }
+
+::ng-deep .mat-expansion-panel-header.mat-expanded {
+    background: #3F51B5;
+    height: 50px !important;
+}
+::ng-deep .mat-expansion-panel-header {
+    background: #3F51B5;
+    height: 40px !important;
+}
+
+::ng-deep .mat-expansion-panel-header:hover {
+    background: #3F51B5 !important;
+}
+
+::ng-deep .mat-expansion-panel-header:focus {
+    background: #3F51B5 !important;
+}
+
+::ng-deep .mat-expansion-panel-header-title {
+    color: #FFF;
+    line-height: 24px !important;
+}
+
+::ng-deep .mat-expansion-panel-header-description {
+    color: #FFF;
+}
+
+::ng-deep .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: none !important;
+}

@@ -36,23 +36,26 @@ export class TablaInvolucradosComponent implements AfterViewInit {
       }, 100);
 
       if (columna1.length) {
-        ['click', 'mouseover', 'mouseleave', 'mouseenter'].forEach(evt =>
+
+
+        ['click', 'mouseover', 'mouseleave', 'mouseenter'].forEach(evt => {
           columna1[0].addEventListener(evt, function () {
             setTimeout(() => {
               table_container[0].setAttribute('style', 'height:' + (alturaVentana - columna2[0].clientHeight - 117) + 'px');
             }, 200);
           });
-        )
+        });
+
 
       }
       if (columna2.length) {
-        ['click', 'mouseover', 'mouseleave', 'mouseenter'].forEach(evt =>
+        ['click', 'mouseover', 'mouseleave', 'mouseenter'].forEach(evt => {
           columna2[0].addEventListener(evt, function () {
             setTimeout(() => {
               table_container[0].setAttribute('style', 'height:' + (alturaVentana - columna2[0].clientHeight - 117) + 'px');
             }, 200);
           });
-        )
+        });
       }
     } else {
       table_container[0].setAttribute('style', 'height:250px');

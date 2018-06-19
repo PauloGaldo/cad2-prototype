@@ -1,5 +1,5 @@
 ::ng-deep .mat-card:not([class*=mat-elevation-z]) {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid #FFF;
     box-shadow: none;
 }
 
@@ -7,22 +7,54 @@
     box-shadow: none;
 }
 
-.origen_llamada {
-    height: 100%;
+.accordeon {
+    display: inline-block;
+    width: 100%;
+    background: #3F51B5 !important;
 
-    .form {
-        display: flex;
+    .container {
+        display: inline-block;
+        width: 100%;
+        background: #f1f1f1;
 
-        .input {
-            margin: 0px 5px;
+        .origen_llamada {
+            height: 100%;
+
+            .form {
+                display: flex;
+
+                .input {
+                    margin: 0px 5px;
+                }
+            }
         }
     }
-}
 
-.handle {
-    color: rgba(0, 0, 0, 0.54);
+    mwlResizable {
+        box-sizing: border-box;
+        background: grey; // required for the enableGhostResize option to work
+    }
+
+    .mwlResizable {
+        // box-sizing: border-box; // required for the enableGhostResize option to work
+        background-color: #FD4140;
+    }
+
+    .handle {
+        color: #FFF;;
+    }
+
+    .resize-handle {
+        position: relative;
+        bottom: 10px;
+
+        // right: 10px;
+        float: right;
+        cursor: w-resize;
+    }
 }
 
 ::ng-deep .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
     transform: translateY(-1.59375em) scale(1) !important;
+    top: 1.5em !important;
 }

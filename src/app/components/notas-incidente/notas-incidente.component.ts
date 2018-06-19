@@ -9,10 +9,11 @@ import { ResizeEvent } from 'angular-resizable-element';
 export class NotasIncidenteComponent implements OnInit {
 
   public nota_incidente;
+  public style = {};
 
   notes = [
     {
-      name: 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur',
+      name: 'Neque porro quisquam est qui dolorem',
       updated: new Date('2/20/16'),
     },
   ];
@@ -21,7 +22,14 @@ export class NotasIncidenteComponent implements OnInit {
   }
 
   onResizeEnd(event: ResizeEvent): void {
-    console.log('Element was resized', event);
+    console.log(event.rectangle.width);
+    this.style = {
+      // position: 'fixed',
+      // left: `${event.rectangle.left}px`,
+      // top: `${event.rectangle.top}px`,
+      width: `${event.rectangle.width}px`,
+      height: 'auto'// `${event.rectangle.height}px`
+    };
   }
 
   onEnter(event: any) {
