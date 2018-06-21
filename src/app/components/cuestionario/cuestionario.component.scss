@@ -4,14 +4,56 @@
     max-height: 18px !important;
 }
 
+::ng-deep .mat-expansion-panel-body{
+    padding: 0 !important;
+}
+
 ::ng-deep .mat-vertical-content-container {
     margin-left: 30px !important;
 }
 
-.cuestionario {
-    max-height: 45vh;
-    overflow: auto;
-    @include tablet {
-      max-height: 30vh;
+.accordeon {
+    display: inline-block;
+    width: 100%;
+    background: #3F51B5 !important;
+
+    .container2 {
+        display: inline-block;
+        width: 100%;
+        background: #f1f1f1;
+
+        .cuestionario {
+            max-height: 40vh;
+            overflow: auto;
+            background: #f1f1f1;
+            @include tablet {
+              max-height: 30vh;
+            }
+        }
+    }
+
+    mwlResizable {
+        box-sizing: border-box;
+        background: grey; // required for the enableGhostResize option to work
+
+    }
+
+    .mwlResizable {
+        box-sizing: border-box; // required for the enableGhostResize option to work
+        background-color: #FD4140;
+    }
+
+    .handle {
+        color: #FFF;
+    }
+
+    .resize-handle {
+        position: relative;
+        bottom: 20px;
+
+        // right: 10px;
+        margin-right: 25px;
+        float: right;
+        cursor: w-resize;
     }
 }

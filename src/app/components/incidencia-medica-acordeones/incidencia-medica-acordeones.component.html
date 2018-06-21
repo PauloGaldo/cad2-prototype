@@ -1,41 +1,49 @@
-<div fxLayout.lt-lg="column" fxLayout="row" fxLayoutWrap="wrap">
-  <div fxLayout="column" fxFlex="70" fxFlex.lt-lg="100" class="incidencia_medica_acordeon">
-    <div fxFlex fxLayout="row">
+<div class="container-fluid" style="padding: 0 !important;">
+  <div class="row" style="margin: 0 !important;">
+    <div class="incidencia_medica_acordeon col-lg-8 col-md-12" style="padding: 0 !important;">
+      <div class="row" style="margin: 0 !important;">
 
-      <div fxLayout="column" fxFlex="50" class="columna1" [dragula]='"first-bag"'>
+        <div class="columna1 col-6" style="padding: 0 !important; background: #e3e3e3;">
 
-        <cad-origen-llamada></cad-origen-llamada>
-        <cad-direccion-incidente></cad-direccion-incidente>
-        <cad-descripcion-incidente></cad-descripcion-incidente>
+          <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+            <cad-origen-llamada style="width: 100%;"></cad-origen-llamada>
+          </div>
+          <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+            <cad-direccion-incidente style="width: 100%;"></cad-direccion-incidente>
+          </div>
+          <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+            <cad-descripcion-incidente style="width: 100%;"></cad-descripcion-incidente>
+          </div>
+
+        </div>
+
+        <div class="columna2 col-6" style="padding: 0 !important; background: #e3e3e3;">
+          <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+            <cad-tipo-incidente style="width: 100%;"></cad-tipo-incidente>
+          </div>
+          <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+            <cad-coorporaciones style="width: 100%;"></cad-coorporaciones>
+          </div>
+          <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+            <cad-notas-incidente style="width: 100%;"></cad-notas-incidente>
+          </div>
+        </div>
 
       </div>
 
-      <div fxLayout="column" fxFlex="50" class="columna2">
-        <div fxFlex fxLayout="row" style="flex: none !important;" [dragula]='"first-bag"'>
-          <cad-tipo-incidente></cad-tipo-incidente>
-        </div>
-        <div fxFlex fxLayout="row" [dragula]='"first-bag"'>
-          <cad-coorporaciones></cad-coorporaciones>
-        </div>
-        <div fxFlex fxLayout="row" [dragula]='"first-bag"'>
-          <cad-notas-incidente></cad-notas-incidente>
-        </div>
+      <div class="involucrados row" style="margin: 0 !important;">
+        <cad-involucrados style="width: 100%"></cad-involucrados>
       </div>
 
     </div>
 
-    <div fxFlex fxLayout="row" class="involucrados">
-      <cad-involucrados style="width: 100%"></cad-involucrados>
-    </div>
-
-  </div>
-
-  <div fxLayout="column" fxLayout.lt-lg="row" fxFlex="30" fxFlex.lt-lg="100">
-    <div fxLayout="row" fxLayout.lt-lg="column" fxFlex.lt-lg="50">
-      <cad-cuestionario fxFlex="100"></cad-cuestionario>
-    </div>
-    <div fxLayout="row" fxLayout.lt-lg="column" fxFlex.lt-lg="50">
-      <cad-protocolo fxFlex="100"></cad-protocolo>
+    <div class="col-lg-4 col-md-12" style="padding: 0 !important;">
+      <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+        <cad-cuestionario fxFlex="100"></cad-cuestionario>
+      </div>
+      <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
+        <cad-protocolo fxFlex="100"></cad-protocolo>
+      </div>
     </div>
   </div>
 </div>

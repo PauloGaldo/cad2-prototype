@@ -1,25 +1,41 @@
-<div class="protocolo">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies justo sed augue semper, et mattis purus placerat.
-  Donec tincidunt volutpat finibus. Suspendisse luctus varius lectus sed pulvinar. Sed ornare ante in eros tempus, eu aliquet
-  ipsum elementum. Cras finibus consequat metus sed congue. In ultrices semper nulla, suscipit faucibus diam iaculis quis.
-  Fusce semper non elit eu maximus. Suspendisse ultrices mi nec odio dictum condimentum. Donec tincidunt sagittis libero,
-  eget sollicitudin ex placerat in. Aliquam non ultrices sapien, et tristique ligula. Nunc ac diam sit amet augue dapibus
-  viverra. Etiam id sapien eu magna imperdiet elementum dignissim sed massa. Integer at ipsum cursus, hendrerit dolor eget,
-  finibus nisl. Aenean libero tellus, ultrices ut magna eget, pulvinar aliquam dui. Curabitur elementum sem orci, tincidunt
-  tempor quam condimentum quis. Fusce aliquet, nunc id mollis faucibus, velit lorem imperdiet dolor, et lobortis nunc augue
-  eu risus. Pellentesque ipsum dolor, tincidunt sit amet ligula vitae, aliquet malesuada elit. Suspendisse quis orci lacinia,
-  facilisis sapien et, sodales risus. Vestibulum risus nibh, auctor eget porttitor ut, interdum eget ex. Nam sed ultrices
-  sapien. Cras posuere libero vulputate purus condimentum, eget pulvinar erat rutrum. Pellentesque quis feugiat turpis, sed
-  tempus diam. Maecenas ornare tortor a orci tristique, quis luctus sapien semper. Mauris eu dui leo. Cras ex nunc, elementum
-  id risus eget, suscipit rutrum diam. Aenean at blandit risus, ac porttitor lectus. Vestibulum sagittis, risus sit amet
-  fermentum hendrerit, libero ligula dapibus nisi, vitae hendrerit nulla sapien ut purus. Duis ut quam a metus facilisis
-  semper eu vel est. Fusce ac nunc et arcu fringilla tempus a semper tellus. Suspendisse potenti. Nullam at lectus elementum,
-  egestas ipsum eu, laoreet augue. Nam finibus ante non laoreet sollicitudin. Etiam semper ante sit amet luctus ornare. Vestibulum
-  consectetur lacinia dui a porttitor. Mauris et urna mi. Vestibulum bibendum turpis lorem. Vestibulum ante ipsum primis
-  in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam quis neque diam. Maecenas sit amet ullamcorper elit. Sed
-  eget elementum massa. Mauris vel odio at ipsum bibendum consectetur. Quisque scelerisque magna urna, sit amet elementum
-  orci dignissim ut. Etiam vel elit dui. Phasellus tincidunt eu mauris ac facilisis. Nunc at porttitor libero, vitae feugiat
-  tortor. Nam non blandit velit. Pellentesque id elit posuere mauris placerat laoreet eget quis eros. Integer vehicula a
-  leo eget sollicitudin. Phasellus eu malesuada justo, sed luctus tellus. Aenean augue tortor, tristique id dolor vitae,
-  tincidunt sollicitudin augue.
-</div>
+<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
+  style="padding: 0 !important">
+  <mat-expansion-panel class="container2" expanded="true" hideToggle="true" [ngStyle]="style">
+    <mat-expansion-panel-header fxFlex="100">
+      <mat-panel-title>
+        Protocolo
+      </mat-panel-title>
+      <mat-icon class='handle'>open_with</mat-icon>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <div class="protocolo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies justo sed augue semper, et mattis purus placerat.
+        Donec tincidunt volutpat finibus. Suspendisse luctus varius lectus sed pulvinar. Sed ornare ante in eros tempus,
+        eu aliquet ipsum elementum. Cras finibus consequat metus sed congue. In ultrices semper nulla, suscipit faucibus
+        diam iaculis quis. Fusce semper non elit eu maximus. Suspendisse ultrices mi nec odio dictum condimentum. Donec tincidunt
+        sagittis libero, eget sollicitudin ex placerat in. Aliquam non ultrices sapien, et tristique ligula. Nunc ac diam
+        sit amet augue dapibus viverra. Etiam id sapien eu magna imperdiet elementum dignissim sed massa. Integer at ipsum
+        cursus, hendrerit dolor eget, finibus nisl. Aenean libero tellus, ultrices ut magna eget, pulvinar aliquam dui. Curabitur
+        elementum sem orci, tincidunt tempor quam condimentum quis. Fusce aliquet, nunc id mollis faucibus, velit lorem imperdiet
+        dolor, et lobortis nunc augue eu risus. Pellentesque ipsum dolor, tincidunt sit amet ligula vitae, aliquet malesuada
+        elit. Suspendisse quis orci lacinia, facilisis sapien et, sodales risus. Vestibulum risus nibh, auctor eget porttitor
+        ut, interdum eget ex. Nam sed ultrices sapien. Cras posuere libero vulputate purus condimentum, eget pulvinar erat
+        rutrum. Pellentesque quis feugiat turpis, sed tempus diam. Maecenas ornare tortor a orci tristique, quis luctus sapien
+        semper. Mauris eu dui leo. Cras ex nunc, elementum id risus eget, suscipit rutrum diam. Aenean at blandit risus,
+        ac porttitor lectus. Vestibulum sagittis, risus sit amet fermentum hendrerit, libero ligula dapibus nisi, vitae hendrerit
+        nulla sapien ut purus. Duis ut quam a metus facilisis semper eu vel est. Fusce ac nunc et arcu fringilla tempus a
+        semper tellus. Suspendisse potenti. Nullam at lectus elementum, egestas ipsum eu, laoreet augue. Nam finibus ante
+        non laoreet sollicitudin. Etiam semper ante sit amet luctus ornare. Vestibulum consectetur lacinia dui a porttitor.
+        Mauris et urna mi. Vestibulum bibendum turpis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia Curae; Etiam quis neque diam. Maecenas sit amet ullamcorper elit. Sed eget elementum massa. Mauris
+        vel odio at ipsum bibendum consectetur. Quisque scelerisque magna urna, sit amet elementum orci dignissim ut. Etiam
+        vel elit dui. Phasellus tincidunt eu mauris ac facilisis. Nunc at porttitor libero, vitae feugiat tortor. Nam non
+        blandit velit. Pellentesque id elit posuere mauris placerat laoreet eget quis eros. Integer vehicula a leo eget sollicitudin.
+        Phasellus eu malesuada justo, sed luctus tellus. Aenean augue tortor, tristique id dolor vitae, tincidunt sollicitudin
+        augue.
+      </div>
+      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,8 +1,8 @@
 <mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 50, right: 50}" [ngStyle]="style" class="mwlResizable accordeon">
-  <mat-expansion-panel class="container" expanded="true" hideToggle="true" [ngStyle]="style">
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col" style="padding: 0 !important">
+  <mat-expansion-panel class="container2 col" expanded="true" hideToggle="true" [ngStyle]="style" style="padding: 0 !important;">
 
-    <mat-expansion-panel-header fxFlex="100">
+    <mat-expansion-panel-header>
       <mat-panel-title>
         Origen de la llamada
       </mat-panel-title>
@@ -13,45 +13,41 @@
     </mat-expansion-panel-header>
 
     <ng-template matExpansionPanelContent>
-      <div fxFlex="100" class="origen_llamada">
-        <div class="form" fxFlex fxLayout="column">
+      <div fxFlex="100" class="origen_llamada row" style="margin: 0;">
+        <div class="form" fxFlex>
 
-          <div fxLayout="row">
-            <mat-form-field fxFlex="40" class="input">
+          <div class="row">
+            <mat-form-field class="input col-5">
               <mat-label>Colonia</mat-label>
               <input matInput type="text" placeholder="Ingrese colonia">
             </mat-form-field>
-            <mat-form-field fxFlex="40" class="input">
+            <mat-form-field class="input col-3">
               <mat-label>Calle</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="20" class="input">
+            <mat-form-field class="input col-3">
               <mat-label>N°</mat-label>
               <input matInput type="text">
             </mat-form-field>
-          </div>
-
-          <div fxLayout="row">
-            <mat-form-field fxFlex="40" class="input">
+          
+            <mat-form-field class="input col-6">
               <mat-label>Estadio</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="40" class="input">
+            <mat-form-field class="input col-3">
               <mat-label>Ciudad</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="20" class="input">
+            <mat-form-field class="input col-3">
               <mat-label>C.P.</mat-label>
               <input matInput type="text">
             </mat-form-field>
-          </div>
-
-          <div fxLayout="row">
-            <mat-form-field fxFlex="50" class="input">
+         
+            <mat-form-field class="input col-6">
               <mat-label>Latitud</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="50" class="input">
+            <mat-form-field class="input col-6">
               <mat-label>Longitud</mat-label>
               <input matInput type="text">
             </mat-form-field>

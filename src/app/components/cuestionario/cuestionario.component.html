@@ -1,65 +1,80 @@
-<mat-vertical-stepper fxFlex="100" class="cuestionario">
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero1 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 1</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero2 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero3 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero4 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero5 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero6 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero7 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero8 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Pregunta numero9 - Si/no</ng-template>
-    <mat-form-field fxFlex="100" class="input">
-      <mat-label>Pregunta numero 2</mat-label>
-      <input matInput type="text">
-    </mat-form-field>
-  </mat-step>
-</mat-vertical-stepper>
+<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
+  style="padding: 0 !important">
+  <mat-expansion-panel class="container2" expanded="true" hideToggle="true" [ngStyle]="style">
+    <mat-expansion-panel-header fxFlex="100">
+      <mat-panel-title>
+        Cuestionario
+      </mat-panel-title>
+      <mat-icon class='handle'>open_with</mat-icon>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent>
+      <mat-vertical-stepper fxFlex="100" class="cuestionario">
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero1 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 1</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero2 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero3 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero4 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero5 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero6 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero7 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero8 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Pregunta numero9 - Si/no</ng-template>
+          <mat-form-field fxFlex="100" class="input">
+            <mat-label>Pregunta numero 2</mat-label>
+            <input matInput type="text">
+          </mat-form-field>
+        </mat-step>
+      </mat-vertical-stepper>
+      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
+    </ng-template>
+  </mat-expansion-panel>
+</mat-accordion>

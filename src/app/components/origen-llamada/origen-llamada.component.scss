@@ -12,7 +12,7 @@
     width: 100%;
     background: #3F51B5 !important;
 
-    .container {
+    .container2 {
         display: inline-block;
         width: 100%;
         background: #f1f1f1;
@@ -24,7 +24,7 @@
                 display: flex;
 
                 .input {
-                    margin: 0px 5px;
+                    // margin: 0px 5px;
                 }
             }
         }
@@ -47,7 +47,7 @@
     .resize-handle {
         position: relative;
         bottom: 10px;
-
+        margin-right: 5px;
         // right: 10px;
         float: right;
         cursor: w-resize;

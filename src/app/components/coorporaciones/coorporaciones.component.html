@@ -1,6 +1,7 @@
 <mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 50, right: 50}" [ngStyle]="style" class="mwlResizable accordeon">
-  <mat-expansion-panel class="container" expanded="true" hideToggle="true" [ngStyle]="style">
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
+  style="padding: 0 !important;">
+  <mat-expansion-panel class="container2" expanded="true" hideToggle="true" [ngStyle]="style">
     <mat-expansion-panel-header fxFlex="100">
       <mat-panel-title>
         Coporaciones
