@@ -1,5 +1,5 @@
 <mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col" style="padding: 0 !important">
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col" style="padding: 0 !important;">
   <mat-expansion-panel class="container2 col" expanded="true" hideToggle="true" [ngStyle]="style" style="padding: 0 !important;">
 
     <mat-expansion-panel-header>
@@ -13,43 +13,43 @@
     </mat-expansion-panel-header>
 
     <ng-template matExpansionPanelContent>
-      <div fxFlex="100" class="origen_llamada row" style="margin: 0;">
+      <div fxFlex="100" class="origen_llamada row" style="margin: 10px 0 0 0;">
         <div class="form" fxFlex>
 
-          <div class="row">
-            <mat-form-field class="input col-5">
+          <div class="row" style="margin: 0;">
+            <mat-form-field class="input col-6">
               <mat-label>Colonia</mat-label>
               <input matInput type="text" placeholder="Ingrese colonia">
             </mat-form-field>
             <mat-form-field class="input col-3">
               <mat-label>Calle</mat-label>
-              <input matInput type="text">
+              <input matInput type="text" placeholder="Ingrese calle">
             </mat-form-field>
             <mat-form-field class="input col-3">
               <mat-label>N°</mat-label>
-              <input matInput type="text">
+              <input matInput type="text" placeholder="Ingrese n°">
             </mat-form-field>
-          
+
             <mat-form-field class="input col-6">
-              <mat-label>Estadio</mat-label>
-              <input matInput type="text">
+              <mat-label>Estado</mat-label>
+              <input matInput type="text" placeholder="Ingrese estado">
             </mat-form-field>
             <mat-form-field class="input col-3">
               <mat-label>Ciudad</mat-label>
-              <input matInput type="text">
+              <input matInput type="text" placeholder="Ingrese ciudad">
             </mat-form-field>
             <mat-form-field class="input col-3">
               <mat-label>C.P.</mat-label>
-              <input matInput type="text">
+              <input matInput type="text" placeholder="Ingrese codigo postal">
             </mat-form-field>
-         
+
             <mat-form-field class="input col-6">
               <mat-label>Latitud</mat-label>
-              <input matInput type="text">
+              <input matInput type="text" placeholder="Ingrese latitud">
             </mat-form-field>
             <mat-form-field class="input col-6">
               <mat-label>Longitud</mat-label>
-              <input matInput type="text">
+              <input matInput type="text" placeholder="Ingrese longitud">
             </mat-form-field>
           </div>
         </div>

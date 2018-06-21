@@ -6,26 +6,26 @@
         <div class="columna1 col-6" style="padding: 0 !important; background: #e3e3e3;">
 
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-            <cad-origen-llamada style="width: 100%;"></cad-origen-llamada>
+            <cad-origen-llamada style="width: 100%;" (resize)="onResizeOL($event)" [ngStyle]="styleOriLlam"></cad-origen-llamada>
           </div>
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-            <cad-direccion-incidente style="width: 100%;"></cad-direccion-incidente>
+            <cad-direccion-incidente style="width: 100%;" (resize)="onResizeDI($event)" [ngStyle]="styleDirInc"></cad-direccion-incidente>
           </div>
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-            <cad-descripcion-incidente style="width: 100%;"></cad-descripcion-incidente>
+            <cad-descripcion-incidente style="width: 100%;" (resize)="onResizeDEI($event)" [ngStyle]="styleDesInc"></cad-descripcion-incidente>
           </div>
 
         </div>
 
         <div class="columna2 col-6" style="padding: 0 !important; background: #e3e3e3;">
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-            <cad-tipo-incidente style="width: 100%;"></cad-tipo-incidente>
+            <cad-tipo-incidente style="width: 100%;" (resize)="onResizeTI($event)" [ngStyle]="styleTipInc"></cad-tipo-incidente>
           </div>
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-            <cad-coorporaciones style="width: 100%;"></cad-coorporaciones>
+            <cad-coorporaciones style="width: 100%;" (resize)="onResizeCO($event)" [ngStyle]="styleCorp"></cad-coorporaciones>
           </div>
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-            <cad-notas-incidente style="width: 100%;"></cad-notas-incidente>
+            <cad-notas-incidente style="width: 100%;" (resize)="onResizeNI($event)" [ngStyle]="styleNotInc"></cad-notas-incidente>
           </div>
         </div>
 

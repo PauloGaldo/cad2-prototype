@@ -13,45 +13,41 @@
     </mat-expansion-panel-header>
 
     <ng-template matExpansionPanelContent>
-      <div fxFlex="100" class="direccion_incidente">
-        <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+      <div fxFlex="100" class="direccion_incidente row" style="margin: 10px 0 0 0;">
+        <div class="form" fxFlex>
 
-          <div fxLayout="row">
-            <mat-form-field fxFlex="30" class="input">
+          <div class="row" style="margin: 0;">
+            <mat-form-field class="input col-4">
               <mat-label>Colonia</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="30" class="input">
+            <mat-form-field class="input col-4">
               <mat-label>Calle</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <!-- <mat-form-field fxFlex="15" class="input">
+            <mat-form-field class="input col-2">
               <mat-label>N°</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="15" class="input">
+            <mat-form-field class="input col-2">
               <mat-label>C.P.</mat-label>
               <input matInput type="text">
-            </mat-form-field> -->
-          </div>
+            </mat-form-field>
 
-          <div fxLayout="row">
-            <mat-form-field fxFlex="50" class="input">
+            <mat-form-field class="input col-6">
               <mat-label>Municipio</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="50" class="input">
+            <mat-form-field class="input col-6">
               <mat-label>Referencia</mat-label>
               <input matInput type="text">
             </mat-form-field>
-          </div>
 
-          <div fxLayout="row">
-            <mat-form-field fxFlex="50" class="input">
+            <mat-form-field class="input col-6">
               <mat-label>Entre calle 1</mat-label>
               <input matInput type="text">
             </mat-form-field>
-            <mat-form-field fxFlex="50" class="input">
+            <mat-form-field class="input col-6">
               <mat-label>Entre calle 2</mat-label>
               <input matInput type="text">
             </mat-form-field>

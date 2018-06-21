@@ -1,12 +1,21 @@
 .accordeon {
     display: inline-block;
     width: 100%;
-    background: #3F51B5 !important;
+    // background: #3F51B5 !important;
 
     .container2 {
         display: inline-block;
         width: 100%;
         background: #f1f1f1;
+
+        .corporaciones {
+            img {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background: #FFF;
+            }
+        }
     }
 
     mwlResizable {

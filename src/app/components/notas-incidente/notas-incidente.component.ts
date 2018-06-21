@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ResizeEvent } from 'angular-resizable-element';
 
 @Component({
@@ -10,6 +10,7 @@ export class NotasIncidenteComponent implements OnInit {
 
   public nota_incidente;
   public style = {};
+  @Output() resize: EventEmitter<number> = new EventEmitter();
 
   notes = [
     {
@@ -22,14 +23,11 @@ export class NotasIncidenteComponent implements OnInit {
   }
 
   onResizeEnd(event: ResizeEvent): void {
-    console.log(event.rectangle.width);
     this.style = {
-      // position: 'fixed',
-      // left: `${event.rectangle.left}px`,
-      // top: `${event.rectangle.top}px`,
       width: `${event.rectangle.width}px`,
-      height: 'auto'// `${event.rectangle.height}px`
+      height: 'auto'
     };
+    this.resize.emit(event.rectangle.width);
   }
 
   onEnter(event: any) {

@@ -7,11 +7,9 @@
       <span>911 - León</span>
     </div>
     <div fxFlex class="llamada">
-      <div mat-ripple [matRippleUnbounded]="false" class="texto_llamada"
-      [ngClass]="{'texto_llamada_color_verde': nivelIncidenciaElegida === 'left',
+      <div mat-ripple [matRippleUnbounded]="false" class="texto_llamada" [ngClass]="{'texto_llamada_color_verde': nivelIncidenciaElegida === 'left',
       'texto_llamada_color_amarillo': nivelIncidenciaElegida === 'center',
-       'texto_llamada_color_rojo': nivelIncidenciaElegida === 'right'}"
-        (click)="mostrarSabana()">45685256 - JUAN PEREZ - Llamada telefonica (388) 42587546</div>
+       'texto_llamada_color_rojo': nivelIncidenciaElegida === 'right'}" (click)="mostrarSabana()">45685256 - JUAN PEREZ - Llamada telefonica (388) 42587546</div>
     </div>
     <div fxFlex.gt-md="20" fxFlex.sm="20" class="iconos">
       <button mat-button class="generar_reporte">GENERAR REPORTE</button>
@@ -54,14 +52,32 @@
       </div>
       <div fxLayout="row" style="margin-top: 15px;">
         <mat-form-field fxFlex="100">
-          <input matInput [matDatepicker]="picker" placeholder="Elije una fecha">
+          <mat-label>Fecha de los hechos</mat-label>
+          <input matInput autocomplete="off" [matDatepicker]="picker" placeholder="Elije una fecha">
           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
       </div>
+      <div fxLayout="column">
+        <mat-form-field fxFlex="100">
+          <mat-label>Nombre(s)</mat-label>
+          <input matInput autocomplete="off" placeholder="Ingresa nombre">
+        </mat-form-field>
+        <mat-form-field fxFlex="100">
+          <mat-label>Apellido Paterno</mat-label>
+          <input matInput autocomplete="off" placeholder="Ingresa Apellido Paterno">
+        </mat-form-field>
+        <mat-form-field fxFlex="100">
+          <mat-label>Apellido Materno</mat-label>
+          <input matInput autocomplete="off" placeholder="Ingresa Apellido Materno">
+        </mat-form-field>
+        <div fxFlex="100" fxLayoutAlign="center center">
+          <mat-slide-toggle>Visible para despacho</mat-slide-toggle>
+        </div>
+      </div>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>Enviar</button>
+    <mat-card-actions fxLayoutAlign="center center">
+      <button mat-raised-button>Enviar</button>
     </mat-card-actions>
   </mat-card>
 </div>
