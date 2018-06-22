@@ -18,6 +18,12 @@
         background: #f1f1f1;
 
         .input-field {
+            label {
+                font-size: 14px !important;
+                -webkit-transform: translateY(8px);
+                transform: translateY(8px);
+            }
+
             label:not(.label-icon).active {
                 transform: translateY(-14px) scale(1) !important;
             }
@@ -26,7 +32,6 @@
                 height: 30px !important;
             }
         }
-
     }
 
     mwlResizable {
