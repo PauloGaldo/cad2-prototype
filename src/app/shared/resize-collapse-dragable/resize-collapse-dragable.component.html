@@ -1,0 +1,21 @@
+<ul mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)"
+  [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" [ngClass]="collapsibleClass" class="mwlResizable collapsible" style="padding: 0 !important;">
+  <li>
+    <div class="collapsible-header">
+      <div class="col s8" (click)="collapseAccordeon()">
+        <ng-content select="[collapse-head]">
+
+        </ng-content>
+      </div>
+      <i class="material-icons handle">open_with</i>
+    </div>
+    <div class="collapsible-body">
+
+      <ng-content select="[collapse-body]">
+
+      </ng-content>
+
+      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
+    </div>
+  </li>
+</ul>

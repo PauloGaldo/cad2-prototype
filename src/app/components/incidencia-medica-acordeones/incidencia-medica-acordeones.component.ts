@@ -18,7 +18,7 @@ export class IncidenciaMedicaAcordeonesComponent implements OnInit {
   constructor(private dragulaService: DragulaService) {
     dragulaService.setOptions('first-bag', {
       moves: function (el, container, handle) {
-        return handle.className === 'handle mat-icon material-icons';
+        return /handle/gi.test(handle.className);
       }
     });
   }

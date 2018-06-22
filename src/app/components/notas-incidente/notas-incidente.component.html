@@ -1,40 +1,23 @@
-<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
-  style="padding: 0 !important;">
-  <mat-expansion-panel class="container2" expanded="true" hideToggle="true" [ngStyle]="style">
+<div class="row" style="margin: 0;">
+  <div class="descripcion_incidente col-12" [ngStyle]="style">
 
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Notas del incidente
-      </mat-panel-title>
-      <mat-icon class='handle'>open_with</mat-icon>
-    </mat-expansion-panel-header>
-
-    <ng-template matExpansionPanelContent>
-      <div class="row" style="margin: 0;">
-        <div class="descripcion_incidente col-12" [ngStyle]="style">
-
-          <div class="form">
-            <div class="row" style="margin: 15px 0px 0px 0px;">
-              <mat-form-field class="input" fxFlex>
-                <mat-label>Notas del incidente</mat-label>
-                <input matInput type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
-              </mat-form-field>
-            </div>
-            <div class="list_container row" style="margin: 15px 0px 0px 0px;">
-              <mat-list fxFlex>
-                <mat-list-item *ngFor="let note of notes.reverse()" mat-ripple [matRippleUnbounded]="false" style="position: relative;">
-                  <mat-icon mat-list-icon>note</mat-icon>
-                  <h4 mat-line>{{note.name}}</h4>
-                  <p mat-line> {{note.updated | date}} </p>
-                </mat-list-item>
-              </mat-list>
-            </div>
-
-          </div>
-        </div>
+    <div class="form">
+      <div class="row" style="margin: 15px 0px 0px 0px;">
+        <mat-form-field class="input" fxFlex>
+          <mat-label>Notas del incidente</mat-label>
+          <input matInput type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
+        </mat-form-field>
       </div>
-      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
-    </ng-template>
-  </mat-expansion-panel>
-</mat-accordion>
+      <div class="list_container row" style="margin: 15px 0px 0px 0px;">
+        <mat-list fxFlex>
+          <mat-list-item *ngFor="let note of notes.reverse()" mat-ripple [matRippleUnbounded]="false" style="position: relative;">
+            <mat-icon mat-list-icon>note</mat-icon>
+            <h4 mat-line>{{note.name}}</h4>
+            <p mat-line> {{note.updated | date}} </p>
+          </mat-list-item>
+        </mat-list>
+      </div>
+
+    </div>
+  </div>
+</div>

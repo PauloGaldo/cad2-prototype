@@ -1,65 +1,44 @@
-<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
-  style="padding: 0 !important;">
-  <mat-expansion-panel class="container2 col" expanded="true" hideToggle="true" [ngStyle]="style" style="padding: 0 !important;">
+<form class="col s12 direccion-incidente">
 
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Dirección del incidente
-      </mat-panel-title>
-      <mat-panel-description>
-        Colonia - Calle 123 - N°1123
-      </mat-panel-description>
-      <mat-icon class='handle'>open_with</mat-icon>
-    </mat-expansion-panel-header>
+  <div class="row" style="margin: 0; height: 60px;">
+    <div class="input-field col s4">
+      <label for="colonia">Colonia</label>
+      <input id="colonia" type="text">
+    </div>
+    <div class="input-field col s4">
+      <label for="calledi">Calle</label>
+      <input id="calledi" type="text">
+    </div>
+    <div class="input-field col s2">
+      <label for="numero">N°</label>
+      <input id="numero" type="text">
+    </div>
+    <div class="input-field col s2">
+      <label for="cp">C.P.</label>
+      <input id="cp" type="text">
+    </div>
+  </div>
 
-    <ng-template matExpansionPanelContent>
+  <div class="row" style="margin: 0; height: 60px;">
+    <div class="input-field col s6">
+      <label for="municipio">Municipio</label>
+      <input id="municipio" type="text">
+    </div>
+    <div class="input-field col s6">
+      <label for="referencia">Referencia</label>
+      <input id="referencia" type="text">
+    </div>
+  </div>
 
-      <form class="col s12">
+  <div class="row" style="margin: 0; height: 60px;">
+    <div class="input-field col s6">
+      <label for="calle1">Entre calle 1</label>
+      <input id="calle1" type="text">
+    </div>
+    <div class="input-field col s6">
+      <label for="calle2">Entre calle 2</label>
+      <input id="calle2" type="text">
+    </div>
+  </div>
 
-        <div class="row" style="margin: 0; height: 60px;">
-          <div class="input-field col s4">
-            <label for="colonia">Colonia</label>
-            <input id="colonia" type="text">
-          </div>
-          <div class="input-field col s4">
-            <label for="calle">Calle</label>
-            <input id="calle" type="text">
-          </div>
-          <div class="input-field col s2">
-            <label for="numero">N°</label>
-            <input id="numero" type="text">
-          </div>
-          <div class="input-field col s2">
-            <label for="cp">C.P.</label>
-            <input id="cp" type="text">
-          </div>
-        </div>
-
-        <div class="row" style="margin: 0; height: 60px;">
-          <div class="input-field col s6">
-            <label for="municipio">Municipio</label>
-            <input id="municipio" type="text">
-          </div>
-          <div class="input-field col s6">
-            <label for="referencia">Referencia</label>
-            <input id="referencia" type="text">
-          </div>
-        </div>
-
-        <div class="row" style="margin: 0; height: 60px;">
-          <div class="input-field col s6">
-            <label for="calle1">Entre calle 1</label>
-            <input id="calle1" type="text">
-          </div>
-          <div class="input-field col s6">
-            <label for="calle2">Entre calle 2</label>
-            <input id="calle2" type="text">
-          </div>
-        </div>
-
-      </form>
-      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
-    </ng-template>
-  </mat-expansion-panel>
-</mat-accordion>
+</form>

@@ -1,31 +1,10 @@
-<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col" style="padding: 0 !important">
-  <mat-expansion-panel class="container2 col" expanded="true" hideToggle="true" [ngStyle]="style" style="padding: 0 !important;">
+<form class="col s12 tipo-incidente">
 
-    <mat-expansion-panel-header fxFlex="100">
-      <mat-panel-title>
-        Tipo de incidente
-      </mat-panel-title>
-      <mat-panel-description>
-        DISTURBIOS
-      </mat-panel-description>
-      <mat-icon class='handle'>open_with</mat-icon>
-    </mat-expansion-panel-header>
+  <div class="row" style="margin: 0;">
+    <div class="input-field col s12">
+      <label for="tipo">Tipo de incidente</label>
+      <input id="tipo" type="text">
+    </div>
+  </div>
 
-    <ng-template matExpansionPanelContent>
-      <div fxFlex="100" class="descripcion_incidente row" style="margin: 10px 0 0 0;">
-        <div class="form" fxFlex>
-
-          <div class="row" fxFlex="100" style="margin: 0;">
-            <mat-form-field class="input col-12">
-              <mat-label>Tipo de incidente</mat-label>
-              <input matInput type="text">
-            </mat-form-field>
-          </div>
-
-        </div>
-      </div>
-      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
-    </ng-template>
-  </mat-expansion-panel>
-</mat-accordion>
+</form>

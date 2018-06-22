@@ -1,5 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { ResizeEvent } from 'angular-resizable-element';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'cad-descripcion-incidente',
@@ -8,20 +7,8 @@ import { ResizeEvent } from 'angular-resizable-element';
 })
 export class DescripcionIncidenteComponent implements OnInit {
 
-  public style = {};
-  @Output() resize: EventEmitter<number> = new EventEmitter();
+  ngOnInit(): void {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onResizeEnd(event: ResizeEvent): void {
-    this.style = {
-      width: `${event.rectangle.width}px`,
-      height: 'auto'
-    };
-    this.resize.emit(event.rectangle.width);
   }
 
 }

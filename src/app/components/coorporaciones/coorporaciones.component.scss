@@ -1,45 +1,8 @@
-.accordeon {
-    display: inline-block;
-    width: 100%;
-    // background: #3F51B5 !important;
-
-    .container2 {
-        display: inline-block;
-        width: 100%;
-        background: #f1f1f1;
-
-        .corporaciones {
-            img {
-                height: 30px;
-                width: 30px;
-                border-radius: 50%;
-                background: #FFF;
-            }
-        }
-    }
-
-    mwlResizable {
-        box-sizing: border-box;
-        background: grey; // required for the enableGhostResize option to work
-
-    }
-
-    .mwlResizable {
-        box-sizing: border-box; // required for the enableGhostResize option to work
-        background-color: #FD4140;
-    }
-
-    .handle {
-        color: #FFF;
-    }
-
-    .resize-handle {
-        position: relative;
-        bottom: 10px;
-
-        // right: 10px;
-        margin-right: 5px;
-        float: right;
-        cursor: w-resize;
+.corporaciones {
+    img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: #FFF;
     }
 }

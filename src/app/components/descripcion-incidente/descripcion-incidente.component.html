@@ -1,33 +1,10 @@
-<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
-  style="padding: 0 !important;">
-  <mat-expansion-panel class="container2 col" expanded="true" hideToggle="true" [ngStyle]="style" style="padding: 0 !important;">
+<form class="col s12 descripcion-incidente">
 
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Descripcion del incidente
-      </mat-panel-title>
-      <mat-panel-description>
-        LLAMADA TELEFONO FIJO
-      </mat-panel-description>
-      <mat-icon class='handle'>open_with</mat-icon>
-    </mat-expansion-panel-header>
+  <div class="row" style="margin: 0; height: 60px;">
+    <div class="input-field col s12">
+      <label for="descripcion">Descripcion del incidente</label>
+      <input id="descripcion" type="text">
+    </div>
+  </div>
 
-    <ng-template matExpansionPanelContent>
-
-      <form class="col s12">
-
-        <div class="row" style="margin: 0; height: 60px;">
-          <div class="input-field col s12">
-            <label for="descripcion">Descripcion del incidente</label>
-            <input id="descripcion" type="text">
-          </div>
-        </div>
-
-      </form>
-
-      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
-    </ng-template>
-
-  </mat-expansion-panel>
-</mat-accordion>
+</form>

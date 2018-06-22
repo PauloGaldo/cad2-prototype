@@ -21,6 +21,7 @@ import { ProtocoloComponent } from './components/protocolo/protocolo.component';
 import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabla-involucrados.component';
 import { TipoIncidenteComponent } from './components/tipo-incidente/tipo-incidente.component';
 import { MaterialModule } from './shared/material.module';
+import { ResizeCollapseDragableComponent } from './shared/resize-collapse-dragable/resize-collapse-dragable.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { MaterialModule } from './shared/material.module';
     TablaInvolucradosComponent,
     CuestionarioComponent,
     ProtocoloComponent,
-    IncidenciaNoMedicaAcordeonesComponent
+    IncidenciaNoMedicaAcordeonesComponent,
+    ResizeCollapseDragableComponent
   ],
   imports: [
     BrowserModule,

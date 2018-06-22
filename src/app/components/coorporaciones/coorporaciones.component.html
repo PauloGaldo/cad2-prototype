@@ -1,82 +1,64 @@
-<mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
-  style="padding: 0 !important;">
-  <mat-expansion-panel class="container2" expanded="true" hideToggle="true" [ngStyle]="style">
-    <mat-expansion-panel-header fxFlex="100">
-      <mat-panel-title>
-        Coporaciones
-      </mat-panel-title>
-      <mat-panel-description>
+<div fxFlex="100" class="corporaciones">
 
-      </mat-panel-description>
-      <mat-icon class='handle'>open_with</mat-icon>
-    </mat-expansion-panel-header>
-    <ng-template matExpansionPanelContent>
-      <div fxFlex="100" class="corporaciones">
+  <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
 
-        <div class="form" fxFlex fxLayout="column" fxLayoutWrap="wrap">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <button mat-icon-button>
+        <!-- <mat-icon>account_balance</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180615-191622271.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>build</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180411-191448849.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>face</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180411-185323712.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>gavel</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170824-131415992.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>motorcycle</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170825-092802578.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>report</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170824-140658053.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>whatshot</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170825-093114423.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>fingerprint</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180129-101116454.jpeg"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>fingerprint</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180201-170842147.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>fingerprint</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170824-140606998.png"
+          alt="">
+      </button>
+      <button mat-icon-button>
+        <!-- <mat-icon>fingerprint</mat-icon> -->
+        <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170825-092814806.png"
+          alt="">
+      </button>
+    </div>
 
-          <div fxLayout="row" fxLayoutAlign="center center">
-            <button mat-icon-button>
-              <!-- <mat-icon>account_balance</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180615-191622271.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>build</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180411-191448849.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>face</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180411-185323712.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>gavel</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170824-131415992.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>motorcycle</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170825-092802578.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>report</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170824-140658053.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>whatshot</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170825-093114423.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>fingerprint</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180129-101116454.jpeg"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>fingerprint</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20180201-170842147.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>fingerprint</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170824-140606998.png"
-                alt="">
-            </button>
-            <button mat-icon-button>
-              <!-- <mat-icon>fingerprint</mat-icon> -->
-              <img src="http://cad.qa.guanajuato.seguritech.org/cad-guanajuato-qa/imagenes/catalogo/corporacion/logo/20170825-092814806.png"
-                alt="">
-            </button>
-          </div>
-
-        </div>
-      </div>
-      <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
-    </ng-template>
-  </mat-expansion-panel>
-</mat-accordion>
+  </div>
+</div>
