@@ -17,22 +17,24 @@
         width: 100%;
         background: #f1f1f1;
 
-        .origen_llamada {
-            height: 100%;
+        /*MATERIALIZE*/
 
-            .form {
-                display: flex;
+        .input-field {
+            label:not(.label-icon).active {
+                transform: translateY(-14px) scale(1) !important;
+            }
 
-                .input {
-                    // margin: 0px 5px;
-                }
+            input {
+                height: 30px !important;
             }
         }
+
     }
 
     mwlResizable {
         box-sizing: border-box;
         background: grey; // required for the enableGhostResize option to work
+
     }
 
     .mwlResizable {
@@ -41,20 +43,16 @@
     }
 
     .handle {
-        color: #FFF;;
+        color: #FFF;
     }
 
     .resize-handle {
         position: relative;
         bottom: 10px;
         margin-right: 5px;
+
         // right: 10px;
         float: right;
         cursor: w-resize;
     }
-}
-
-::ng-deep .mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
-    transform: translateY(-1.59375em) scale(1) !important;
-    top: 1.5em !important;
 }

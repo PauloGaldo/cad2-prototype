@@ -1,5 +1,6 @@
 <mat-accordion [multi]="true" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true"
-  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col" style="padding: 0 !important;">
+  (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" class="mwlResizable accordeon col"
+  style="padding: 0 !important;">
   <mat-expansion-panel class="container2 col" expanded="true" hideToggle="true" [ngStyle]="style" style="padding: 0 !important;">
 
     <mat-expansion-panel-header>
@@ -13,18 +14,18 @@
     </mat-expansion-panel-header>
 
     <ng-template matExpansionPanelContent>
-      <div fxFlex="100" class="descripcion_incidente row" style="margin: 10px 0 0 0;">
-        <div class="form" fxFlex>
 
-          <div class="row" fxFlex="100" style="margin: 0;">
-            <mat-form-field class="input col-12">
-              <mat-label>Descripcion del incidente</mat-label>
-              <input matInput type="text">
-            </mat-form-field>
+      <form class="col s12" style="margin: 10px 0 0 0;">
+
+        <div class="row" style="margin: 0; height: 60px;">
+          <div class="input-field col s12">
+            <label for="descripcion">Descripcion del incidente</label>
+            <input id="descripcion" type="text">
           </div>
-
         </div>
-      </div>
+
+      </form>
+
       <img src="http://i.imgur.com/eqzz2dl.gif" class="resize-handle" mwlResizeHandle [resizeEdges]="{right: true}">
     </ng-template>
 
