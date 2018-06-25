@@ -1,59 +1,38 @@
 @import "../../../_mixins";
 ::ng-deep .mat-vertical-stepper-header {
-    padding: 20px !important;
-    max-height: 18px !important;
+  padding: 20px !important;
+  max-height: 18px !important;
 }
 
-::ng-deep .mat-expansion-panel-body{
-    padding: 0 !important;
-}
+.cuestionario {
+  max-height: 390px; //vh;
+  overflow: auto;
+  background: #f1f1f1;
+  @include tablet {
+    max-height: 30vh;
+  }
 
-::ng-deep .mat-vertical-content-container {
-    margin-left: 30px !important;
-}
+  ::ng-deep .mat-vertical-content {
+    padding: 0 24px 0px 24px !important;
+  }
 
-.accordeon {
-    display: inline-block;
-    width: 100%;
-    background: #3F51B5 !important;
+  ::ng-deep .mat-stepper-vertical-line::before {
+    left: -5px !important;
+  }
 
-    .container2 {
-        display: inline-block;
-        width: 100%;
-        background: #f1f1f1;
-
-        .cuestionario {
-            max-height: 40vh;
-            overflow: auto;
-            background: #f1f1f1;
-            @include tablet {
-              max-height: 30vh;
-            }
-        }
+  .input-field {
+    label {
+      font-size: 14px !important;
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
     }
 
-    mwlResizable {
-        box-sizing: border-box;
-        background: grey; // required for the enableGhostResize option to work
-
+    label:not(.label-icon).active {
+      transform: translateY(-14px) scale(1) !important;
     }
 
-    .mwlResizable {
-        box-sizing: border-box; // required for the enableGhostResize option to work
-        background-color: #FD4140;
+    input {
+      height: 30px !important;
     }
-
-    .handle {
-        color: #FFF;
-    }
-
-    .resize-handle {
-        position: relative;
-        bottom: 20px;
-
-        // right: 10px;
-        margin-right: 25px;
-        float: right;
-        cursor: w-resize;
-    }
+  }
 }

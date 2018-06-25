@@ -50,7 +50,7 @@
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
 
             <cad-resize-collapse-dragable style="width: 100%;" (resize)="onResizeNI($event)" [ngStyle]="styleNotInc" [collapsible]="'notinc'">
-              <div collapse-head>Corporaciones</div>
+              <div collapse-head>Notas del incidente</div>
               <cad-notas-incidente collapse-body></cad-notas-incidente>
             </cad-resize-collapse-dragable>
 
@@ -67,10 +67,20 @@
 
     <div class="col-lg-4 col-md-12" style="padding: 0 !important;">
       <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-        <cad-cuestionario fxFlex="100"></cad-cuestionario>
+
+        <cad-resize-collapse-dragable style="width: 100%;" [collapsible]="'cuest'">
+          <div collapse-head>Cuestionario</div>
+          <cad-cuestionario collapse-body></cad-cuestionario>
+        </cad-resize-collapse-dragable>
+
       </div>
       <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
-        <cad-protocolo fxFlex="100"></cad-protocolo>
+
+        <cad-resize-collapse-dragable style="width: 100%;" [collapsible]="'prot'">
+          <div collapse-head>Protocolo</div>
+          <cad-protocolo collapse-body></cad-protocolo>
+        </cad-resize-collapse-dragable>
+
       </div>
     </div>
   </div>

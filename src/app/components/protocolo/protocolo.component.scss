@@ -1,46 +1,10 @@
 @import "../../../_mixins";
 
-.accordeon {
-  display: inline-block;
-  width: 100%;
-  background: #3f51b5 !important;
-
-  .container2 {
-    display: inline-block;
-    width: 100%;
-    background: #f1f1f1;
-
-    .protocolo {
-      max-height: 40vh;
-      overflow: auto;
-      padding: 20px;
-      @include tablet {
-        max-height: 30vh;
-      }
-    }
-  }
-
-  mwlResizable {
-    box-sizing: border-box;
-    background: grey; // required for the enableGhostResize option to work
-  }
-
-  .mwlResizable {
-    box-sizing: border-box; // required for the enableGhostResize option to work
-    background-color: #fd4140;
-  }
-
-  .handle {
-    color: #fff;
-  }
-
-  .resize-handle {
-    position: relative;
-    bottom: 20px;
-
-    // right: 10px;
-    margin-right: 25px;
-    float: right;
-    cursor: w-resize;
+.protocolo {
+  max-height: 390px; //vh;
+  overflow: auto;
+  padding: 20px;
+  @include tablet {
+    max-height: 30vh;
   }
 }

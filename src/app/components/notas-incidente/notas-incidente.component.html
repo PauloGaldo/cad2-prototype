@@ -1,23 +1,23 @@
 <div class="row" style="margin: 0;">
   <div class="descripcion_incidente col-12" [ngStyle]="style">
 
-    <div class="form">
-      <div class="row" style="margin: 15px 0px 0px 0px;">
-        <mat-form-field class="input" fxFlex>
-          <mat-label>Notas del incidente</mat-label>
-          <input matInput type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
-        </mat-form-field>
+    <form class="col s12">
+      <div class="row" style="margin: 0px 0px 0px 0px;">
+        <div class="input-field s12" fxFlex>
+          <label for="not_inc">Notas del incidente</label>
+          <input id="not_inc" name="not_inc" type="text" [(ngModel)]="nota_incidente" (keyup.enter)="onEnter($event)">
+        </div>
       </div>
-      <div class="list_container row" style="margin: 15px 0px 0px 0px;">
-        <mat-list fxFlex>
-          <mat-list-item *ngFor="let note of notes.reverse()" mat-ripple [matRippleUnbounded]="false" style="position: relative;">
-            <mat-icon mat-list-icon>note</mat-icon>
-            <h4 mat-line>{{note.name}}</h4>
-            <p mat-line> {{note.updated | date}} </p>
-          </mat-list-item>
-        </mat-list>
-      </div>
-
+    </form>
+    <div class="list_container row" style="margin: 15px 0px 0px 0px;">
+      <mat-list fxFlex>
+        <mat-list-item *ngFor="let note of notes.reverse()" mat-ripple [matRippleUnbounded]="false" style="position: relative;">
+          <mat-icon mat-list-icon>note</mat-icon>
+          <h4 mat-line>{{note.name}}</h4>
+          <p mat-line> {{note.updated | date}} </p>
+        </mat-list-item>
+      </mat-list>
     </div>
+
   </div>
 </div>

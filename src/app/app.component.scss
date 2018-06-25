@@ -92,9 +92,30 @@
         }
     }
 
+    .input-field {
+        label {
+            font-size: 14px !important;
+            -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+        }
+
+        label:not(.label-icon).active {
+            transform: translateY(-14px) scale(1) !important;
+        }
+
+        input {
+            height: 30px !important;
+        }
+    }
+
     .nivel_incidencia {
         mat-button-toggle-group {
             margin: auto;
+        }
+
+        ::ng-deep .mat-button-toggle-label-content>*{
+            vertical-align: bottom;
+            color: #000000;
         }
 
         ::ng-deep .mat-button-toggle span {
