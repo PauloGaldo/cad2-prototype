@@ -1,6 +1,38 @@
 .origen-llamada {
     width: 100%;
     margin: 0;
+    padding: 0 !important;
+
+    .datos_llamada{
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 5px 0;
+
+        .chip{
+            color: #FFF;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            padding: 0;
+            margin: 0;
+            line-height: 20px;
+        }
+
+        .texto{
+            font-size: 13px;
+            font-weight: bold;
+            margin: 0 5px;
+        }
+
+    }
+
+    .latlng{
+        text-align: right;
+        margin: 0px 20px 0px;
+        height: 14px;
+        font-size: 14px;
+    }
 
     .input-field {
         label {

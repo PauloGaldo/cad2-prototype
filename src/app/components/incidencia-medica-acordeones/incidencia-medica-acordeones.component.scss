@@ -1,3 +1,4 @@
+@import "../../../_mixins";
 .no_medica {
     mat-grid-tile {
         background: lightblue;
@@ -20,16 +21,31 @@ body {
     @return $column - $body;
 }
 
-.incidencia_medica_acordeon {
+.columna_1 {
+    width: 70%;
+    @include tablet {
+        width: 100%;
+    }
     .columna1 {
         max-height: 65vh;
     }
-
     .columna2 {
         max-height: 65vh;
     }
 }
 
-::ng-deep .mat-form-field-label:focus-within{
+.columna_2 {
+    width: 30%;
+    @include tablet {
+        width: 100%;
+        .row{
+            width: 50%;
+            display: inline-block;
+            
+        }
+    }
+}
+
+::ng-deep .mat-form-field-label:focus-within {
     font-size: 20px;
 }

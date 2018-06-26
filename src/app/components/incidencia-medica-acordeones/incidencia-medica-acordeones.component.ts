@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResizeEvent } from 'angular-resizable-element';
 import { DragulaService } from 'ng2-dragula';
 
 @Component({
@@ -14,6 +15,12 @@ export class IncidenciaMedicaAcordeonesComponent implements OnInit {
   public styleTipInc = {};
   public styleCorp = {};
   public styleNotInc = {};
+  public styleCuest = {};
+  public styleProt = {};
+  public styleCol1 = {};
+  public styleCol2 = {};
+  public textoOrigenLlamada = '';
+  public valoresForm = {};
 
   constructor(private dragulaService: DragulaService) {
     dragulaService.setOptions('first-bag', {
@@ -24,6 +31,16 @@ export class IncidenciaMedicaAcordeonesComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  onResizeEnd(event: ResizeEvent): void {
+    const resize = event.rectangle.width * 100 / window.innerWidth;
+    this.styleCol1 = {
+      width: `${resize}%`
+    };
+    this.styleCol2 = {
+      width: `${100 - resize}%`
+    };
   }
 
   onResizeDI(event) {
@@ -66,6 +83,25 @@ export class IncidenciaMedicaAcordeonesComponent implements OnInit {
       width: `${event}px`,
       height: 'auto'
     };
+  }
+
+  onResizeCU(event) {
+    this.styleCuest = {
+      width: `${event}px`,
+      height: 'auto'
+    };
+  }
+
+  onResizePRO(event) {
+    this.styleProt = {
+      width: `${event}px`,
+      height: 'auto'
+    };
+  }
+
+  formChange(values: any) {
+    console.log(values);
+    this.valoresForm = values;
   }
 
 }

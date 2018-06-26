@@ -1,3 +1,27 @@
 .table_container {
-  overflow: auto;
+    .botonera {
+        width: 100%;
+        padding: 10px 30px;
+        .menu {
+            i {
+                font-size: 20px;
+            }
+            font-size: 25px;
+        }
+        .opciones {
+            float: right;
+            i {
+                margin: 0 10px;
+                font-size: 20px;
+            }
+        }
+    }
+    overflow: auto;
+    tr {
+        height: 35px !important;
+        td,
+        th {
+            padding: 5px;
+        }
+    }
 }

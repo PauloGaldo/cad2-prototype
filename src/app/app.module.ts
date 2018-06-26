@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResizableModule } from 'angular-resizable-element';
@@ -49,7 +49,8 @@ import { ResizeCollapseDragableComponent } from './shared/resize-collapse-dragab
     MaterialModule,
     FormsModule,
     DragulaModule,
-    ResizableModule
+    ResizableModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

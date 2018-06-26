@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ResizeEvent } from 'angular-resizable-element';
 
 @Component({
@@ -9,11 +10,25 @@ import { ResizeEvent } from 'angular-resizable-element';
 export class OrigenLlamadaComponent implements OnInit {
 
   public style = {};
+  public origenForm: FormGroup;
   @Output() resize: EventEmitter<number> = new EventEmitter();
+  @Output() formChange: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(public fb: FormBuilder) {
+    this.origenForm = this.fb.group({
+      colonia: '',
+      calle: '',
+      numero: '',
+      estado: '',
+      ciudad: '',
+      cp: ''
+    });
+  }
 
   ngOnInit() {
+    this.origenForm.valueChanges.subscribe((values) => {
+      this.formChange.emit(values);
+    });
   }
 
   onResizeEnd(event: ResizeEvent): void {

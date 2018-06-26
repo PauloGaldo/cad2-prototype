@@ -1,35 +1,41 @@
-<form class="col s12 origen-llamada">
-  <div class="row" style="margin: 0; height: 60px;">
+<form class="col s12 origen-llamada" [formGroup]="origenForm">
+  <div class="datos_llamada">
+    <span class="texto">Procedentes</span> <span class="chip green">4</span>
+    <span class="texto">No Procedentes</span> <span class="orange chip">4</span>
+    <span class="texto">Total</span> <span class="blue chip">4</span>
+  </div>
+  <div class="row" style="margin: 0; height: 50px;">
     <div class="input-field col s6">
       <label for="colonia">Colonia</label>
-      <input id="colonia" type="text">
+      <input id="colonia" formControlName="colonia" type="text">
     </div>
     <div class="input-field col s3">
       <label for="calle">Calle</label>
-      <input id="calle" type="text">
+      <input id="calle" formControlName="calle" type="text">
     </div>
     <div class="input-field col s3">
       <label for="numero">N°</label>
-      <input id="numero" type="text">
+      <input id="numero" formControlName="numero" type="text">
     </div>
   </div>
 
-  <div class="row" style="margin: 0; height: 60px;">
+  <div class="row" style="margin: 0; height: 50px;">
     <div class="input-field col s6">
       <label for="estado">Estado</label>
-      <input id="estado" type="text">
+      <input id="estado" formControlName="estado" type="text">
     </div>
     <div class="input-field col s3">
       <label for="ciudad">Ciudad</label>
-      <input id="ciudad" type="text">
+      <input id="ciudad" formControlName="ciudad" type="text">
     </div>
     <div class="input-field col s3">
       <label for="cp">C.P.</label>
-      <input id="cp" type="text">
+      <input id="cp" formControlName="cp" type="text">
     </div>
   </div>
-
-  <div class="row" style="margin: 0; height: 60px;">
+  <p class="latlng">Lat: 21.3456758 - Lng: -101.234234</p>
+  <!-- <div class="row" style="margin: 0;">
+    
     <div class="input-field col s6">
       <label for="lat">Latitud</label>
       <input id="lat" type="text">
@@ -38,5 +44,5 @@
       <label for="lng">Longitud</label>
       <input id="lng" type="text">
     </div>
-  </div>
+  </div> -->
 </form>

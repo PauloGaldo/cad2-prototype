@@ -1,6 +1,10 @@
 <div class="container-fluid" style="padding: 0 !important;">
   <div class="row" style="margin: 0 !important;">
-    <div class="incidencia_medica_acordeon col-lg-8 col-md-12" style="padding: 0 !important;">
+
+    <!-- PRIMER COLUMNA -->
+    <div class="columna_1" style="padding: 0 !important;" mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}"
+      [ngStyle]="styleCol1" [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)" [resizeSnapGrid]="{left: 1, right: 1}">
+
       <div class="row" style="margin: 0 !important;">
 
         <div class="columna1 col-6" style="padding: 0 !important; background: #e3e3e3;">
@@ -8,8 +12,11 @@
           <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
 
             <cad-resize-collapse-dragable style="width: 100%;" (resize)="onResizeOL($event)" [ngStyle]="styleOriLlam" [collapsible]="'orilla'">
-              <div collapse-head>Origen llamada</div>
-              <cad-origen-llamada collapse-body></cad-origen-llamada>
+              <div collapse-head>
+                <span>Origen llamada</span>
+                <span>{{textoOrigenLlamada}}</span>
+              </div>
+              <cad-origen-llamada collapse-body (formChange)="formChange($event)"></cad-origen-llamada>
             </cad-resize-collapse-dragable>
 
           </div>
@@ -65,18 +72,21 @@
 
     </div>
 
-    <div class="col-lg-4 col-md-12" style="padding: 0 !important;">
+    <!--  SEGUNDA COLUMNA -->
+    <div class="columna_2" style="padding: 0 !important;" [ngStyle]="styleCol2">
+      <!-- CUESTIONARIO -->
       <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
 
-        <cad-resize-collapse-dragable style="width: 100%;" [collapsible]="'cuest'">
+        <cad-resize-collapse-dragable style="width: 100%;" (resize)="onResizeCU($event)" [ngStyle]="styleCuest" [collapsible]="'cuest'">
           <div collapse-head>Cuestionario</div>
           <cad-cuestionario collapse-body></cad-cuestionario>
         </cad-resize-collapse-dragable>
 
       </div>
+      <!-- PROTOCOLO -->
       <div class="row" [dragula]='"first-bag"' style="margin: 0 !important;">
 
-        <cad-resize-collapse-dragable style="width: 100%;" [collapsible]="'prot'">
+        <cad-resize-collapse-dragable style="width: 100%;" (resize)="onResizePRO($event)" [ngStyle]="styleProt" [collapsible]="'prot'">
           <div collapse-head>Protocolo</div>
           <cad-protocolo collapse-body></cad-protocolo>
         </cad-resize-collapse-dragable>
