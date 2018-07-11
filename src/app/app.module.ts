@@ -22,6 +22,7 @@ import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabl
 import { TipoIncidenteComponent } from './components/tipo-incidente/tipo-incidente.component';
 import { MaterialModule } from './shared/material.module';
 import { ResizeCollapseDragableComponent } from './shared/resize-collapse-dragable/resize-collapse-dragable.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { ResizeCollapseDragableComponent } from './shared/resize-collapse-dragab
     CuestionarioComponent,
     ProtocoloComponent,
     IncidenciaNoMedicaAcordeonesComponent,
-    ResizeCollapseDragableComponent
+    ResizeCollapseDragableComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
