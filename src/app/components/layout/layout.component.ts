@@ -9,9 +9,12 @@ import { DragulaService } from 'ng2-dragula';
 })
 export class LayoutComponent implements OnInit {
 
+    public widthWindow = window.innerWidth;
+    public heightWindow = window.innerHeight;
+
     public styleDirInc = {};
-    public styleDesInc = {};
     public styleOriLlam = {};
+    public styleDesInc = {};
     public styleTipInc = {};
     public styleCorp = {};
     public styleNotInc = {};
@@ -21,18 +24,35 @@ export class LayoutComponent implements OnInit {
     public styleCol2 = {};
     public textoOrigenLlamada = '';
     public valoresForm = {};
-    public width = 30;
+
+    public grid: any;
 
     constructor(private dragulaService: DragulaService) {
-        // dragulaService.setOptions('first-bag', {
-        //     moves: function (el, container, handle) {
-        //         return /handle/gi.test(handle.className);
-        //     }
-        // });
+
     }
 
     ngOnInit() {
+        this.styleOriLlam = {
+            top: '0px',
+            left: '0px',
+            width: `${(this.widthWindow / 100) * 37.5}px`,
+            height: `${197}px`
+        };
+        this.styleDirInc = {
+            top: `${192}px`,
+            left: '0px',
+            width: `${(this.widthWindow / 100) * 37.5}px`,
+            height: `${197}px`
+        };
     }
+
+    onDragOL(event: any) {
+        this.styleOriLlam = {
+            top: event.top,
+            left: event.left
+        };
+    }
+
 
     onResizeEnd(event: ResizeEvent): void {
         const resize = event.rectangle.width * 100 / window.innerWidth;

@@ -1,8 +1,8 @@
 <div class="layout">
 
-    <div [dragula]='"first-bag"'>
+    <div class="grid">
 
-        <cad-resize-collapse-dragable class="item1" style="width: 100%;" (resize)="onResizeOL($event)" [ngStyle]="styleOriLlam" [collapsible]="'orilla'">
+        <cad-resize-collapse-dragable class="item" style="width: 100%;" (drag)="onDragOL($event)" (resize)="onResizeOL($event)" [ngStyle]="styleOriLlam" [collapsible]="'orilla'">
             <div collapse-head>
                 <span>Origen llamada</span>
                 <span>{{textoOrigenLlamada}}</span>
@@ -10,30 +10,32 @@
             <cad-origen-llamada collapse-body (formChange)="formChange($event)"></cad-origen-llamada>
         </cad-resize-collapse-dragable>
 
-        <cad-resize-collapse-dragable class="item2" style="width: 100%;" (resize)="onResizeTI($event)" [ngStyle]="styleTipInc" [collapsible]="'tipinc'">
-            <div collapse-head>Tipo incidente</div>
-            <cad-tipo-incidente collapse-body></cad-tipo-incidente>
-        </cad-resize-collapse-dragable>
-
-        <cad-resize-collapse-dragable class="item3" style="width: 100%;" (resize)="onResizeCO($event)" [ngStyle]="styleCorp" [collapsible]="'corp'">
-            <div collapse-head>Corporaciones</div>
-            <cad-coorporaciones collapse-body></cad-coorporaciones>
-        </cad-resize-collapse-dragable>
-
-        <cad-resize-collapse-dragable class="item4" style="width: 100%;" (resize)="onResizeCU($event)" [ngStyle]="styleCuest" [collapsible]="'cuest'">
-            <div collapse-head>Cuestionario</div>
-            <cad-cuestionario collapse-body></cad-cuestionario>
-        </cad-resize-collapse-dragable>
-
-        <cad-resize-collapse-dragable class="item5" style="width: 100%;" (resize)="onResizeDI($event)" [ngStyle]="styleDirInc" [collapsible]="'dirinc'">
+        <cad-resize-collapse-dragable class="item" style="width: 100%;" (resize)="onResizeDI($event)" [ngStyle]="styleDirInc" [collapsible]="'dirinc'">
             <div collapse-head>Direccion incidente</div>
             <cad-direccion-incidente collapse-body></cad-direccion-incidente>
         </cad-resize-collapse-dragable>
 
-        <cad-resize-collapse-dragable class="item6" style="width: 100%;" (resize)="onResizeDEI($event)" [ngStyle]="styleDesInc" [collapsible]="'desinc'">
+        <!-- <cad-resize-collapse-dragable class="item" style="width: 100%;" (resize)="onResizeTI($event)" [ngStyle]="styleTipInc" [collapsible]="'tipinc'">
+            <div collapse-head>Tipo incidente</div>
+            <cad-tipo-incidente collapse-body></cad-tipo-incidente>
+        </cad-resize-collapse-dragable>
+
+        <cad-resize-collapse-dragable class="item" style="width: 100%;" (resize)="onResizeCO($event)" [ngStyle]="styleCorp" [collapsible]="'corp'">
+            <div collapse-head>Corporaciones</div>
+            <cad-coorporaciones collapse-body></cad-coorporaciones>
+        </cad-resize-collapse-dragable>
+
+        <cad-resize-collapse-dragable class="item" style="width: 100%;" (resize)="onResizeCU($event)" [ngStyle]="styleCuest" [collapsible]="'cuest'">
+            <div collapse-head>Cuestionario</div>
+            <cad-cuestionario collapse-body></cad-cuestionario>
+        </cad-resize-collapse-dragable>
+
+
+
+        <cad-resize-collapse-dragable class="item" style="width: 100%;" (resize)="onResizeDEI($event)" [ngStyle]="styleDesInc" [collapsible]="'desinc'">
             <div collapse-head>Descripcion</div>
             <cad-descripcion-incidente collapse-body></cad-descripcion-incidente>
-        </cad-resize-collapse-dragable>
+        </cad-resize-collapse-dragable> -->
 
     </div>
 

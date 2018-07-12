@@ -1,52 +1,52 @@
 .collapsible {
-  width: 100%;
-  margin: 0;
-  box-shadow: none !important;
+    width: 100%;
+    margin: 0;
+    box-shadow: none !important;
 
-  .collapsible-header{
-    padding: 5px !important;
-    font-weight: bold;
-  }
+    .collapsible-header {
+        padding: 5px !important;
+        font-weight: bold;
+    }
 
-  .collapsible-body {
-      padding: 0;
-      width: 100%;
-      padding-bottom: 10px;
-      // background: #f1f1f1;
+    .collapsible-body {
+        padding: 0;
+        width: 100%;
+        padding-bottom: 10px;
 
-      .input-field {
-          label {
-              font-size: 14px !important;
-              -webkit-transform: translateY(8px);
-              transform: translateY(8px);
-          }
+        // background: #f1f1f1;
 
-          label:not(.label-icon).active {
-              transform: translateY(-14px) scale(1) !important;
-          }
+        .input-field {
+            label {
+                font-size: 14px !important;
+                -webkit-transform: translateY(8px);
+                transform: translateY(8px);
+            }
 
-          input {
-              height: 30px !important;
-          }
-      }
-  }
+            label:not(.label-icon).active {
+                transform: translateY(-14px) scale(1) !important;
+            }
 
-  .mwlResizable {
-      box-sizing: border-box; // required for the enableGhostResize option to work
-      background-color: #fd4140;
-  }
+            input {
+                height: 30px !important;
+            }
+        }
+    }
 
-  .handle {
-      color: #000000;
-      float: right;
-      margin: 0 !important;
-  }
+    .handle {
+        color: #000000;
+        float: right;
+        margin: 0 !important;
+    }
 
-  .resize-handle {
-      position: relative;
-      bottom: 10px;
-      margin-right: 5px;
-      float: right;
-      cursor: w-resize;
-  }
+    .resize-handle {
+        position: relative;
+        bottom: 10px;
+        margin-right: 5px;
+        float: right;
+        cursor: w-resize;
+    }
+}
+
+.resize-ghost-element {
+    top: 0px !important;
 }

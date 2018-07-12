@@ -1,3 +1,28 @@
 .layout {
-    height: calc(100% - 64px);
+    height: calc(100% - 0px);
+
+    .grid {
+        position: relative;
+
+        .item {
+            display: block;
+            position: absolute;
+            width: auto;
+            height: auto;
+            z-index: 1;
+            // top: auto !important;
+        }
+
+        .item.muuri-item-dragging {
+            z-index: 3;
+        }
+
+        .item.muuri-item-releasing {
+            z-index: 2;
+        }
+
+        .item.muuri-item-hidden {
+            z-index: 0;
+        }
+    }
 }

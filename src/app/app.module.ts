@@ -15,6 +15,7 @@ import { IncidenciaMedicaAcordeonesComponent } from './components/incidencia-med
 import { IncidenciaMedicaComponent } from './components/incidencia-medica/incidencia-medica.component';
 import { IncidenciaNoMedicaAcordeonesComponent } from './components/incidencia-no-medica-acordeones/incidencia-no-medica-acordeones.component';
 import { InvolucradosComponent } from './components/involucrados/involucrados.component';
+import { LayoutComponent } from './components/layout/layout.component';
 import { NotasIncidenteComponent } from './components/notas-incidente/notas-incidente.component';
 import { OrigenLlamadaComponent } from './components/origen-llamada/origen-llamada.component';
 import { ProtocoloComponent } from './components/protocolo/protocolo.component';
@@ -22,39 +23,38 @@ import { TablaInvolucradosComponent } from './components/tabla-involucrados/tabl
 import { TipoIncidenteComponent } from './components/tipo-incidente/tipo-incidente.component';
 import { MaterialModule } from './shared/material.module';
 import { ResizeCollapseDragableComponent } from './shared/resize-collapse-dragable/resize-collapse-dragable.component';
-import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    IncidenciaMedicaComponent,
-    OrigenLlamadaComponent,
-    DireccionIncidenteComponent,
-    DescripcionIncidenteComponent,
-    IncidenciaMedicaAcordeonesComponent,
-    TipoIncidenteComponent,
-    NotasIncidenteComponent,
-    CoorporacionesComponent,
-    InvolucradosComponent,
-    TablaInvolucradosComponent,
-    CuestionarioComponent,
-    ProtocoloComponent,
-    IncidenciaNoMedicaAcordeonesComponent,
-    ResizeCollapseDragableComponent,
-    LayoutComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FlexLayoutModule,
-    BrowserAnimationsModule,
-    MaterialModule,
-    FormsModule,
-    DragulaModule,
-    ResizableModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        IncidenciaMedicaComponent,
+        OrigenLlamadaComponent,
+        DireccionIncidenteComponent,
+        DescripcionIncidenteComponent,
+        IncidenciaMedicaAcordeonesComponent,
+        TipoIncidenteComponent,
+        NotasIncidenteComponent,
+        CoorporacionesComponent,
+        InvolucradosComponent,
+        TablaInvolucradosComponent,
+        CuestionarioComponent,
+        ProtocoloComponent,
+        IncidenciaNoMedicaAcordeonesComponent,
+        ResizeCollapseDragableComponent,
+        LayoutComponent
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FlexLayoutModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        FormsModule,
+        DragulaModule,
+        ResizableModule,
+        ReactiveFormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
