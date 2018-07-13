@@ -1,4 +1,4 @@
-<ul mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)" id="dragable"
+<ul mwlResizable [resizeEdges]="{bottom: false, right: true, top: false, left: true}" [enableGhostResize]="true" (resizeEnd)="onResizeEnd($event)" #dragableElement
   [resizeSnapGrid]="{left: 1, right: 1}" [ngStyle]="style" [ngClass]="collapsibleClass" class="mwlResizable collapsible" style="padding: 0 !important; top: 0 !important;">
   <li>
     <div class="collapsible-header">
@@ -7,7 +7,7 @@
 
         </ng-content>
       </div>
-      <i class="material-icons handle" id="mydivheader">open_with</i>
+      <i class="material-icons handle" (mousedown)="dragElement(dragableElement, $event)">open_with</i>
     </div>
     <div class="collapsible-body">
 

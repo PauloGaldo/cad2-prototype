@@ -47,10 +47,10 @@ export class LayoutComponent implements OnInit {
     }
 
     onDragOL(event: any) {
-        this.styleOriLlam = {
-            top: event.top,
-            left: event.left
-        };
+        // this.styleOriLlam = {
+        //     top: event.top,
+        //     left: event.left
+        // };
     }
 
 

@@ -3,6 +3,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxDnDModule } from '@swimlane/ngx-dnd';
 import { ResizableModule } from 'angular-resizable-element';
 import { DragulaModule } from 'ng2-dragula';
 import { AppRoutingModule } from './app-routing.module';
@@ -52,7 +53,8 @@ import { ResizeCollapseDragableComponent } from './shared/resize-collapse-dragab
         FormsModule,
         DragulaModule,
         ResizableModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        NgxDnDModule
     ],
     providers: [],
     bootstrap: [AppComponent]
