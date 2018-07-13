@@ -23,7 +23,8 @@
             "styles": [
               "src/styles.scss",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./node_modules/materialize-css/dist/css/materialize.css"
+              "./node_modules/materialize-css/dist/css/materialize.css",
+              "node_modules/angular2-draggable/css/resizable.min.css"
             ],
             "scripts": [
               "./node_modules/materialize-css/dist/js/materialize.js",

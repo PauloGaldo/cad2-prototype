@@ -1,5 +1,6 @@
 .collapsible {
-    width: 100%;
+    width: inherit;
+    display: inline-block;
     margin: 0;
     box-shadow: none !important;
 
@@ -47,6 +48,6 @@
     }
 }
 
-.resize-ghost-element {
-    top: 0px !important;
-}
+// .resize-ghost-element {
+//     top: 0px !important;
+// }
